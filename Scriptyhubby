@@ -70,18 +70,7 @@ if game.PlaceId == 6672200623 then
         end)
     end
 
-
-
-
-
-
-
-
-
-
-
-
---local gamepasssmood = require(game:GetService("ReplicatedStorage").Aero.Shared.Gamepasses)
+    --local gamepasssmood = require(game:GetService("ReplicatedStorage").Aero.Shared.Gamepasses)
 --gamepasssmood.HasPassOtherwisePrompt = function () return true end
     
     
