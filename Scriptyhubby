@@ -1,0 +1,116 @@
+if game.PlaceId == 6672200623 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Ninja Simulator", "Midnight")
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("MainSection")
+    local Hello = Window:NewTab("Hello")
+    
+    
+    MainSection:NewToggle("DNA", "Buys all available DNA", function(v)
+       getgenv.DNA = v
+       while true do
+            if not getgenv().DNA then return end
+            local args = {
+            [1] = "DNA"
+            }
+        
+            game:GetService("ReplicatedStorage").Knit.Services.ShopService.RE.buyAll:FireServer(unpack(args))
+        wait()
+    end
+    end)
+    
+    
+    elseif game.PlaceId == 5490351219 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Clicker Madness!", "Midnight")
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("MainSection")
+    
+    
+    
+            ---mods---
+        local clickMod = require(game:GetService("Players").AemberR.PlayerScripts.Aero.Controllers.UI.Click)
+        clickMod:Click()
+    
+        
+        MainSection:NewToggle("Click", "Clicks", function(v)
+            getgenv().Click = v
+            spawn(function ()
+                while true do 
+                    if not getgenv().Click then return end
+                    clickMod:Click()
+                    wait()
+                end
+            end)
+    end)
+    elseif game.PlaceId == 7047488135 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Clicker Madness!", "Midnight")
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("MainSection")
+        MainSection:NewToggle("Click", "Clicks", function(v)
+            getgenv().Click = v
+            spawn(function ()
+                while true do
+                    if not getgenv().Click then return end
+                    game:GetService("ReplicatedStorage").Remotes.AddSpeed:FireServer()
+                    wait()
+                end
+            end)
+        end)
+        MainSection:NewButton("ButtonText", "ButtonInfo", function()
+            local PlayerHead = game.Players.LocalPlayer.Character.Head
+            for i, v in pairs(game:GetService("Workspace").OrbSpawns:GetDescendants()) do
+                if v.Name == "TouchInterest" then
+                    firetouchinterest(PlayerHead, v.parent, 0)
+                    wait(0.1)
+                    firetouchinterest(PlayerHead, v.parent, 1)
+                end
+            end
+        end)
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+--local gamepasssmood = require(game:GetService("ReplicatedStorage").Aero.Shared.Gamepasses)
+--gamepasssmood.HasPassOtherwisePrompt = function () return true end
+    
+    
+    
+--local mod = require(game:GetService("Players").AemberR.PlayerScripts.Aero.Controllers.UI.Pets)
+    
+ --   print("--UPVALUES--")---
+ --   for i,v in pairs(getupvalues(mod.CalculatePetCapacity)) do---
+--        print(i,v);
+  --  end
+ --   print("---")
+ --   print("--CONSTNATS--")
+  --  for i,v in pairs(getconstants(mod.CalculatePetCapacity)) do--
+ --       print(i,v)  
+  --  end
+ --   setconstant(mod.CalculatePetCapacity, 3, 40)
+    
+ --   local Clickymod = require(game:GetService("ReplicatedStorage").Modules.CircleClick)--
+ --   Clickymod:CircleClick()
+    
+ --   game:GetService("Workspace").OrbSpawns
+    
+    
+  --  local PlayerHead = game.Players.LocalPlayer.Character.Head
+    
+  --  for i, v in pairs(game:GetService("Workspace").OrbSpawns:GetDescendants()) do--
+  --      if v.Name == "TouchInterest" then
+  --          firetouchinterest(PlayerHead, v.parent, 0)
+  --          wait(0.1)
+  --          firetouchinterest(PlayerHead, v.parent, 1)
+ --       end
+ --   end
