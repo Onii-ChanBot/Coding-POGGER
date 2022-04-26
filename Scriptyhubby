@@ -58,7 +58,7 @@ if game.PlaceId == 6672200623 then
                 end
             end)
         end)
-        MainSection:NewButton("ButtonText", "ButtonInfo", function()
+        MainSection:NewButton("Orbs", "Collect all orbs", function()
             local PlayerHead = game.Players.LocalPlayer.Character.Head
             for i, v in pairs(game:GetService("Workspace").OrbSpawns:GetDescendants()) do
                 if v.Name == "TouchInterest" then
