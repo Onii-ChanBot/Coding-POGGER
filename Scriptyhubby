@@ -68,7 +68,29 @@ if game.PlaceId == 6672200623 then
                 end
             end
         end)
+    elseif game.PlaceId == 6961712970 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Clicker Madness!", "Midnight")
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("MainSection")
+        MainSection:NewToggle("Click", "Clicks", function(v)
+            getgenv().Click = v 
+            spawn(function ()
+                while true do
+                    if not getgenv().Click then return end
+                    game:GetService("Players").LocalPlayer.Character.Shoes.PutShoe:FireServer()
+                    wait()
+                end
+            end)
+        end)
     end
+
+
+
+
+
+
+
 
     --local gamepasssmood = require(game:GetService("ReplicatedStorage").Aero.Shared.Gamepasses)
 --gamepasssmood.HasPassOtherwisePrompt = function () return true end
@@ -102,4 +124,4 @@ if game.PlaceId == 6672200623 then
   --          wait(0.1)
   --          firetouchinterest(PlayerHead, v.parent, 1)
  --       end
- --   end
+ --  end
