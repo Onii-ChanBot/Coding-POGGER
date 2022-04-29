@@ -1,0 +1,5489 @@
+-- Decompiled with the Synapse X Luau decompiler.
+
+local v1 = UDim2.new(0.318, 0, 0.166, 0);
+local v2 = { UDim2.new(0.499, 0, 0.357, 0), UDim2.new(0.334, 0, 0.536, 0), UDim2.new(0.661, 0, 0.536, 0) };
+local function u1(p1)
+	local v3 = {};
+	for v4, v5 in pairs(p1) do
+		if type(v5) == "table" then
+			v5 = u1(v5);
+		end;
+		v3[v4] = v5;
+	end;
+	return v3;
+end;
+local u2 = { UDim2.new(0.5, 0, 0.5, 0), UDim2.new(0.3, 0, 0.5, 0), UDim2.new(0.7, 0, 0.5, 0) };
+local u3 = false;
+local u4 = {
+	Common = Color3.fromRGB(255, 255, 255), 
+	Uncommon = Color3.fromRGB(0, 179, 255), 
+	Rare = Color3.fromRGB(88, 255, 37), 
+	Legendary = Color3.fromRGB(255, 238, 0), 
+	Mythical = Color3.fromRGB(255, 0, 0), 
+	["Event Exclusive"] = Color3.fromRGB(255, 58, 61), 
+	Limited = Color3.fromRGB(255, 103, 243), 
+	Secret = Color3.fromRGB(13, 13, 13)
+};
+local u5 = 1;
+local function u6(p2)
+	for v6, v7 in pairs(game.Players.LocalPlayer.PlayerGui:WaitForChild("BillboardGuis"):GetChildren()) do
+		v7.Enabled = p2;
+	end;
+end;
+local function u7(p3, p4, p5, p6, p7, p8)
+	local v8 = nil;
+	local v9 = nil;
+	local v10 = nil;
+	local v11 = nil;
+	local v12 = nil;
+	local v13 = nil;
+	local v14 = nil;
+	local v15 = nil;
+	local v16 = nil;
+	local v17 = nil;
+	local v18 = nil;
+	local v19 = nil;
+	local v20 = nil;
+	local v21 = nil;
+	local v22 = nil;
+	local v23 = nil;
+	local v24 = nil;
+	local v25 = nil;
+	local v26 = nil;
+	local v27 = nil;
+	local v28 = nil;
+	local v29 = nil;
+	local v30 = nil;
+	local v31 = nil;
+	local v32 = nil;
+	local v33 = nil;
+	local v34 = nil;
+	local v35 = nil;
+	local v36 = nil;
+	local v37 = nil;
+	local v38 = nil;
+	local v39 = nil;
+	local v40 = nil;
+	local v41 = nil;
+	local v42 = nil;
+	local v43 = nil;
+	local v44 = nil;
+	local v45 = nil;
+	local v46 = nil;
+	local v47 = nil;
+	local v48 = nil;
+	local v49 = nil;
+	local v50 = nil;
+	local v51 = nil;
+	local v52 = nil;
+	local v53 = nil;
+	local v54 = nil;
+	local v55 = nil;
+	local v56 = nil;
+	local v57 = nil;
+	local v58 = nil;
+	local v59 = nil;
+	local v60 = nil;
+	local v61 = nil;
+	local v62 = nil;
+	local v63 = nil;
+	local v64 = nil;
+	local v65 = nil;
+	local v66 = nil;
+	local v67 = nil;
+	local v68 = nil;
+	local v69 = nil;
+	local v70 = nil;
+	local v71 = nil;
+	local v72 = nil;
+	local v73 = nil;
+	local v74 = nil;
+	local v75 = nil;
+	local v76 = nil;
+	local v77 = nil;
+	local v78 = nil;
+	local v79 = nil;
+	local v80 = nil;
+	local v81 = nil;
+	local v82 = nil;
+	local v83 = nil;
+	local v84 = nil;
+	local v85 = nil;
+	local v86 = nil;
+	local v87 = nil;
+	local v88 = nil;
+	local v89 = nil;
+	local v90 = nil;
+	local v91 = nil;
+	local v92 = nil;
+	local v93 = nil;
+	local v94 = nil;
+	local v95 = nil;
+	local v96 = nil;
+	local v97 = nil;
+	local v98 = nil;
+	local v99 = nil;
+	local v100 = nil;
+	local v101 = nil;
+	local v102 = nil;
+	local v103 = nil;
+	local v104 = nil;
+	local v105 = nil;
+	local v106 = nil;
+	local v107 = nil;
+	local v108 = nil;
+	local v109 = nil;
+	local v110 = nil;
+	local v111 = nil;
+	local u8 = nil;
+	local u9 = nil;
+	local u10 = nil;
+	local v112 = nil;
+	local v113 = nil;
+	local v114 = nil;
+	local v115 = nil;
+	local v116 = nil;
+	local v117 = nil;
+	local v118 = nil;
+	local v119 = nil;
+	local v120 = nil;
+	local v121 = nil;
+	local v122 = nil;
+	local v123 = nil;
+	local v124 = nil;
+	local v125 = nil;
+	local v126 = nil;
+	local v127 = nil;
+	local v128 = nil;
+	local v129 = nil;
+	local v130 = nil;
+	local v131 = nil;
+	local v132 = nil;
+	local v133 = nil;
+	local v134 = nil;
+	local v135 = nil;
+	local v136 = nil;
+	local v137 = nil;
+	local v138 = nil;
+	local v139 = nil;
+	local v140 = nil;
+	local v141 = nil;
+	local v142 = nil;
+	local v143 = nil;
+	local v144 = nil;
+	local v145 = nil;
+	local v146 = nil;
+	local v147 = nil;
+	local v148 = nil;
+	local v149 = nil;
+	local v150 = nil;
+	local v151 = nil;
+	local v152 = nil;
+	local v153 = nil;
+	local v154 = nil;
+	local v155 = nil;
+	local v156 = nil;
+	local v157 = nil;
+	local v158 = nil;
+	local v159 = nil;
+	local v160 = nil;
+	local v161 = nil;
+	local v162 = nil;
+	local v163 = nil;
+	local v164 = nil;
+	local v165 = nil;
+	local v166 = nil;
+	local v167 = nil;
+	local v168 = nil;
+	local v169 = nil;
+	local v170 = nil;
+	local v171 = nil;
+	local v172 = nil;
+	local v173 = nil;
+	local v174 = nil;
+	local v175 = nil;
+	local v176 = nil;
+	local v177 = nil;
+	local v178 = nil;
+	local v179 = nil;
+	local v180 = nil;
+	local v181 = nil;
+	local v182 = nil;
+	local v183 = nil;
+	local v184 = nil;
+	local v185 = nil;
+	local v186 = nil;
+	local v187 = nil;
+	local v188 = nil;
+	local v189 = nil;
+	local v190 = nil;
+	local v191 = nil;
+	local v192 = nil;
+	local v193 = nil;
+	local v194 = nil;
+	local v195 = nil;
+	local v196 = nil;
+	local v197 = nil;
+	local v198 = nil;
+	local v199 = nil;
+	local v200 = nil;
+	local v201 = nil;
+	local v202 = nil;
+	local v203 = nil;
+	local v204 = nil;
+	local v205 = nil;
+	local v206 = nil;
+	local v207 = nil;
+	local v208 = nil;
+	local v209 = nil;
+	local v210 = nil;
+	local v211 = nil;
+	local v212 = nil;
+	local v213 = nil;
+	local v214 = nil;
+	local v215 = nil;
+	local v216 = nil;
+	local v217 = nil;
+	local v218 = nil;
+	local v219 = nil;
+	local v220 = nil;
+	local v221 = nil;
+	local v222 = nil;
+	local v223 = nil;
+	local v224 = nil;
+	local v225 = nil;
+	local v226 = nil;
+	local v227 = nil;
+	local v228 = nil;
+	local v229 = nil;
+	local v230 = nil;
+	local v231 = nil;
+	local v232 = nil;
+	local v233 = nil;
+	local v234 = nil;
+	local v235 = nil;
+	local v236 = nil;
+	local v237 = nil;
+	local v238 = nil;
+	local v239 = nil;
+	local v240 = nil;
+	local v241 = nil;
+	local v242 = nil;
+	local v243 = nil;
+	local v244 = nil;
+	local v245 = nil;
+	local v246 = nil;
+	local v247 = nil;
+	local v248 = nil;
+	local v249 = nil;
+	local v250 = nil;
+	local v251 = nil;
+	local v252 = nil;
+	local v253 = nil;
+	local v254 = nil;
+	local v255 = nil;
+	local v256 = nil;
+	local v257 = nil;
+	local v258 = nil;
+	local v259 = nil;
+	local v260 = nil;
+	local v261 = nil;
+	local v262 = nil;
+	local v263 = nil;
+	local v264 = nil;
+	local v265 = nil;
+	local v266 = nil;
+	local v267 = nil;
+	local v268 = nil;
+	local v269 = nil;
+	local v270 = nil;
+	local v271 = nil;
+	local v272 = nil;
+	local v273 = nil;
+	local v274 = nil;
+	local v275 = nil;
+	local v276 = nil;
+	local v277 = nil;
+	local v278 = nil;
+	local v279 = nil;
+	local v280 = nil;
+	local v281 = nil;
+	local v282 = nil;
+	local v283 = nil;
+	local v284 = nil;
+	local v285 = nil;
+	local v286 = nil;
+	local v287 = nil;
+	local v288 = nil;
+	local v289 = nil;
+	local v290 = nil;
+	local v291 = nil;
+	local v292 = nil;
+	local v293 = nil;
+	local v294 = nil;
+	local v295 = nil;
+	local v296 = nil;
+	local v297 = nil;
+	local v298 = nil;
+	local v299 = nil;
+	local v300 = nil;
+	local v301 = nil;
+	local v302 = nil;
+	local v303 = require(p3.Modules.PetStats);
+	local v304 = require(p3.Modules.EggStats);
+	local v305 = require(p3.Modules.Upgrades);
+	local v306 = require(p3.Modules.UIParticle);
+	local v307 = 1;
+	if p3.Replica.Data.Upgrades["Star Open Speed"] then
+		v307 = v305["Star Open Speed"][p3.Replica.Data.Upgrades["Star Open Speed"]].Value;
+	end;
+	if p5 and not u2[p5] then
+		return;
+	end;
+	local v308 = p3.MainGui.CapsuleOpening.Template:Clone();
+	v308.Name = p4;
+	v308.Visible = true;
+	u3 = false;
+	if p5 then
+		v308.Position = u2[p5];
+		if p5 == 1 then
+			v308.Size = UDim2.new(v308.Size.X.Scale * 1.2, 0, v308.Size.Y.Scale * 1.2, 0);
+		end;
+	end;
+	v308.Parent = p3.MainGui.CapsuleOpening;
+	local v309 = nil;
+	local v310 = Instance.new("Camera");
+	v310.Parent = v308.ViewportFrame;
+	v308.ViewportFrame.CurrentCamera = v310;
+	v310.CFrame = CFrame.new(0, 0, 3);
+	v310.CFrame = CFrame.new(v310.CFrame.Position, Vector3.new(0, 0, 0));
+	if not p8 then
+		local v311, v312, v313 = pairs(v304);
+		while true do
+			local v314, v315 = v311(v312, v313);
+			if not v314 then
+				break;
+			end;
+			if v315.Secret and v315.Secret.name == p4 then
+				v309 = v314;
+				break;
+			end;
+			for v316, v317 in pairs(v315.Pets) do
+				if v317.name == p4 then
+					v309 = v314;
+					break;
+				end;
+			end;		
+		end;
+		local v318 = p3.Assets.Eggs[v309]:Clone();
+		v318.Parent = v308.ViewportFrame;
+		v318:SetPrimaryPartCFrame(CFrame.new(0, 15, -6) * CFrame.Angles(0, math.pi, 0));
+		p3.Tween:Model(v318, TweenInfo.new(1 * v307, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+			Value = CFrame.new(0, 0, -6) * CFrame.Angles(0, math.pi, 0)
+		});
+		wait(1 * v307);
+		if not v308.Parent then
+			return;
+		end;
+		local v319 = true;
+		if p5 == 1 then
+			p3.Sound.PlayLocalSound(p3.Sounds.Effects.PetWhir);
+		end;
+		local v320 = 1 - 1;
+		while true do
+			local v321 = not v319 and {
+				Value = CFrame.new(0, 0, -6) * CFrame.Angles(0, math.pi, math.rad(-10 - v320))
+			} or {
+				Value = CFrame.new(0, 0, -6) * CFrame.Angles(0, math.pi, math.rad(10 + v320))
+			};
+			local v322 = (0.1 - v320 / 100 / 1.5) * v307;
+			if v320 == 12 then
+				v321 = {
+					Value = CFrame.new(0, 0, -6) * CFrame.Angles(0, math.pi, 0)
+				};
+			end;
+			if not v308.Parent then
+				break;
+			end;
+			if not v318.Parent then
+				break;
+			end;
+			if not v318.PrimaryPart then
+				break;
+			end;
+			p3.Tween:Model(v318, v320 == 1 and TweenInfo.new(v322, Enum.EasingStyle.Sine, Enum.EasingDirection.In) or (v320 == 12 and TweenInfo.new(v322, Enum.EasingStyle.Sine, Enum.EasingDirection.Out) or TweenInfo.new(v322, Enum.EasingStyle.Linear)), v321);
+			wait(v322);
+			if 0 <= 1 then
+				if not (v320 < 12) then
+					if not v308.Parent then
+						return;
+					else
+						p3.Tween:Model(v318, TweenInfo.new(0.4 * v307, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+							Value = CFrame.new(0, 0, -4) * CFrame.Angles(0, math.pi, 0)
+						});
+						for v323, v324 in pairs(v318:GetChildren()) do
+							p3.TweenService:Create(v324, TweenInfo.new(0.25 * v307), {
+								Transparency = 1
+							}):Play();
+						end;
+						task.delay(0.25 * v307, function()
+							v318:Destroy();
+						end);
+						v8 = "Parent";
+						v9 = v308;
+						v10 = v8;
+						v11 = v9[v10];
+						v12 = v11;
+						if not v12 then
+							return;
+						else
+							local v325 = "Assets";
+							v13 = p3;
+							v14 = v325;
+							v15 = v13[v14];
+							local v326 = "Pets";
+							v16 = v15;
+							v17 = v326;
+							v18 = v16[v17];
+							v19 = v18;
+							v20 = p4;
+							local v327 = v19[v20];
+							local v328 = "Clone";
+							v21 = v327;
+							local v329 = v21;
+							v22 = v327;
+							v23 = v328;
+							local v330 = v22[v23];
+							v24 = v330;
+							v25 = v329;
+							local v331 = v24(v25);
+							local v332 = "ViewportFrame";
+							v26 = v308;
+							v27 = v332;
+							local v333 = v26[v27];
+							local v334 = "Parent";
+							v28 = v331;
+							v29 = v334;
+							v30 = v333;
+							v28[v29] = v30;
+							v31 = CFrame.new;
+							v32 = 0;
+							v33 = 0;
+							v34 = -6;
+							v35 = v31;
+							v36 = v32;
+							v37 = v33;
+							v38 = v34;
+							local v335 = v35(v36, v37, v38);
+							local v336 = CFrame.Angles;
+							local v337 = 0;
+							local v338 = math.pi;
+							v39 = 0;
+							v40 = v336;
+							v41 = v337;
+							v42 = v338;
+							v43 = v39;
+							local v339 = v40(v41, v42, v43);
+							v44 = v335;
+							v45 = v339;
+							v49 = v44 * v45;
+							local v340 = "SetPrimaryPartCFrame";
+							v46 = v331;
+							local v341 = v46;
+							v47 = v331;
+							v48 = v340;
+							local v342 = v47[v48];
+							v50 = v342;
+							v51 = v341;
+							v52 = v49;
+							v50(v51, v52);
+							v53 = p8;
+							if v53 then
+								wait(0.3);
+							end;
+							local v343 = "Parent";
+							v54 = v308;
+							v55 = v343;
+							local v344 = v54[v55];
+							v56 = v344;
+							if not v56 then
+								return;
+							else
+								local v345 = "Tween";
+								v57 = p3;
+								v58 = v345;
+								local v346 = v57[v58];
+								v59 = v331;
+								local v347 = v59;
+								local v348 = TweenInfo.new;
+								local v349 = 0.3;
+								v60 = v349;
+								v61 = v307;
+								local v350 = v60 * v61;
+								local v351 = Enum.EasingStyle.Quint;
+								local v352 = Enum.EasingDirection.Out;
+								v62 = v348;
+								v63 = v350;
+								v64 = v351;
+								v65 = v352;
+								local v353 = v62(v63, v64, v65);
+								local v354 = {};
+								local v355 = CFrame.new;
+								local v356 = 0;
+								v66 = 0;
+								v67 = -2;
+								v68 = v355;
+								v69 = v356;
+								v70 = v66;
+								v71 = v67;
+								local v357 = v68(v69, v70, v71);
+								local v358 = CFrame.Angles;
+								local v359 = 0;
+								local v360 = math.pi;
+								v72 = 0;
+								v73 = v358;
+								v74 = v359;
+								v75 = v360;
+								v76 = v72;
+								local v361 = v73(v74, v75, v76);
+								v77 = v357;
+								v78 = v361;
+								local v362 = v77 * v78;
+								local v363 = "Value";
+								v79 = v354;
+								v80 = v363;
+								v81 = v362;
+								v79[v80] = v81;
+								local v364 = "Model";
+								v82 = v346;
+								local v365 = v82;
+								v83 = v346;
+								v84 = v364;
+								local v366 = v83[v84];
+								v85 = v366;
+								v86 = v365;
+								v87 = v347;
+								v88 = v353;
+								v89 = v354;
+								v85(v86, v87, v88, v89);
+								local v367 = 1;
+								v90 = p5;
+								v91 = v367;
+								if v90 == v91 then
+									if v303[p4].Rarity == "Secret" then
+										p3.Sound.PlayLocalSound(p3.Sounds.Effects.SecretOpen);
+									else
+										p3.Sound.PlayLocalSound(p3.Sounds.Effects.PetJingle);
+									end;
+								end;
+								local v368 = "Replica";
+								v92 = p3;
+								v93 = v368;
+								local v369 = v92[v93];
+								local v370 = "Data";
+								v94 = v369;
+								v95 = v370;
+								local v371 = v94[v95];
+								local v372 = "Settings";
+								v96 = v371;
+								v97 = v372;
+								local v373 = v96[v97];
+								local v374 = "Lite Graphics";
+								v98 = v373;
+								v99 = v374;
+								local v375 = v98[v99];
+								v100 = v375;
+								if not v100 then
+									local v376 = v306.new(v308.Parent["Particles" .. tostring(p5)], v308.Parent.Sparkle);
+									v376.rate = 100;
+									function v376.onSpawn(p9)
+										p9.element.Visible = true;
+										p9.element.ImageColor3 = u4[v303[p4].Rarity];
+										p9.velocity = Vector2.new(math.random(-800, 800), math.random(-800, 800));
+										p3.TweenService:Create(p9.element, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+											ImageTransparency = 1
+										}):Play();
+										p9.element:TweenSize(UDim2.new(0.1, 0, 1.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5);
+										task.delay(0.5, function()
+											p9.element:TweenSize(UDim2.new(0.04, 0, 0.08, 0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.5);
+										end);
+										p9.maxAge = 1.5;
+									end;
+									function v376.onUpdate(p10, p11)
+										p10.velocity = p10.velocity;
+										p10.position = p10.position - p10.velocity / 3 * p11;
+									end;
+									task.delay(0.3, function()
+										v376.rate = 0;
+										wait(10);
+										v376:Destroy();
+									end);
+								end;
+								local v377 = wait;
+								local v378 = 0.3;
+								v101 = v378;
+								v102 = v307;
+								local v379 = v101 * v102;
+								v103 = v377;
+								v104 = v379;
+								v103(v104);
+								local v380 = "Parent";
+								v105 = v308;
+								v106 = v380;
+								local v381 = v105[v106];
+								v107 = v381;
+								if not v107 then
+									return;
+								else
+									local v382 = nil;
+									local v383 = 0;
+									local v384 = "RunService";
+									v108 = p3;
+									v109 = v384;
+									local v385 = v108[v109];
+									local v386 = "RenderStepped";
+									v110 = v385;
+									v111 = v386;
+									local v387 = v110[v111];
+									u8 = v331;
+									u9 = v382;
+									u10 = v383;
+									local v388 = function()
+										if not u8.Parent then
+											u9:Disconnect();
+											return;
+										end;
+										if not u8.PrimaryPart then
+											u9:Disconnect();
+											return;
+										end;
+										if not u8.PrimaryPart.Parent then
+											u9:Disconnect();
+											return;
+										end;
+										u10 = math.min(3, u10 + 0.035);
+										u8:SetPrimaryPartCFrame(u8:GetPrimaryPartCFrame() * CFrame.Angles(0, math.rad(u10), 0));
+									end;
+									local v389 = "Connect";
+									v112 = v387;
+									local v390 = v112;
+									v113 = v387;
+									v114 = v389;
+									local v391 = v113[v114];
+									v115 = v391;
+									v116 = v390;
+									v117 = v388;
+									local v392 = v115(v116, v117);
+									v118 = v392;
+									u9 = v118;
+									local v393 = "TweenService";
+									v119 = p3;
+									v120 = v393;
+									local v394 = v119[v120];
+									local v395 = "ViewportFrame";
+									v121 = v308;
+									v122 = v395;
+									local v396 = v121[v122];
+									local v397 = TweenInfo.new;
+									local v398 = 0.3;
+									v123 = v398;
+									v124 = v307;
+									local v399 = v123 * v124;
+									v125 = v397;
+									v126 = v399;
+									local v400 = v125(v126);
+									local v401 = {};
+									local v402 = Color3.new;
+									local v403 = 1;
+									local v404 = 1;
+									local v405 = 1;
+									v127 = v402;
+									v128 = v403;
+									v129 = v404;
+									v130 = v405;
+									local v406 = v127(v128, v129, v130);
+									local v407 = "ImageColor3";
+									v131 = v401;
+									v132 = v407;
+									v133 = v406;
+									v131[v132] = v133;
+									local v408 = "Create";
+									v134 = v394;
+									local v409 = v134;
+									v135 = v394;
+									v136 = v408;
+									local v410 = v135[v136];
+									v137 = v410;
+									v138 = v409;
+									v139 = v396;
+									v140 = v400;
+									v141 = v401;
+									local v411 = v137(v138, v139, v140, v141);
+									local v412 = "Play";
+									v142 = v411;
+									local v413 = v142;
+									v143 = v411;
+									v144 = v412;
+									local v414 = v143[v144];
+									v145 = v414;
+									v146 = v413;
+									v145(v146);
+									local v415 = 1;
+									v147 = p5;
+									v148 = v415;
+									if v147 == v148 then
+
+									end;
+									local v416 = wait;
+									local v417 = 0.5;
+									v149 = v417;
+									v150 = v307;
+									local v418 = v149 * v150;
+									v151 = v416;
+									v152 = v418;
+									v151(v152);
+									local v419 = "Parent";
+									v153 = v308;
+									v154 = v419;
+									local v420 = v153[v154];
+									v155 = v420;
+									if not v155 then
+										return;
+									else
+										local v421 = "OpenLabel";
+										v156 = v308;
+										v157 = v421;
+										local v422 = v156[v157];
+										local v423 = "Text";
+										v158 = v422;
+										v159 = v423;
+										v160 = p4;
+										v158[v159] = v160;
+										local v424 = "OpenRarity";
+										v161 = v308;
+										v162 = v424;
+										local v425 = v161[v162];
+										local v426 = u4;
+										v163 = v303;
+										v164 = p4;
+										local v427 = v163[v164];
+										local v428 = "Rarity";
+										v165 = v427;
+										v166 = v428;
+										local v429 = v165[v166];
+										v167 = v426;
+										v168 = v429;
+										local v430 = v167[v168];
+										local v431 = "TextColor3";
+										v169 = v425;
+										v170 = v431;
+										v171 = v430;
+										v169[v170] = v171;
+										local v432 = "OpenRarity";
+										v172 = v308;
+										v173 = v432;
+										local v433 = v172[v173];
+										v174 = v303;
+										v175 = p4;
+										local v434 = v174[v175];
+										local v435 = "Rarity";
+										v176 = v434;
+										v177 = v435;
+										local v436 = v176[v177];
+										local v437 = "Text";
+										v178 = v433;
+										v179 = v437;
+										v180 = v436;
+										v178[v179] = v180;
+										local v438 = "TweenService";
+										v181 = p3;
+										v182 = v438;
+										local v439 = v181[v182];
+										local v440 = "OpenLabel";
+										v183 = v308;
+										v184 = v440;
+										local v441 = v183[v184];
+										local v442 = TweenInfo.new;
+										local v443 = 0.3;
+										v185 = v443;
+										v186 = v307;
+										local v444 = v185 * v186;
+										v187 = v442;
+										v188 = v444;
+										local v445 = v187(v188);
+										local v446 = {};
+										local v447 = 0;
+										local v448 = "TextTransparency";
+										v189 = v446;
+										v190 = v448;
+										v191 = v447;
+										v189[v190] = v191;
+										local v449 = "Create";
+										v192 = v439;
+										local v450 = v192;
+										v193 = v439;
+										v194 = v449;
+										local v451 = v193[v194];
+										v195 = v451;
+										v196 = v450;
+										v197 = v441;
+										v198 = v445;
+										v199 = v446;
+										local v452 = v195(v196, v197, v198, v199);
+										local v453 = "Play";
+										v200 = v452;
+										local v454 = v200;
+										v201 = v452;
+										v202 = v453;
+										local v455 = v201[v202];
+										v203 = v455;
+										v204 = v454;
+										v203(v204);
+										local v456 = "TweenService";
+										v205 = p3;
+										v206 = v456;
+										local v457 = v205[v206];
+										local v458 = "OpenLabel";
+										v207 = v308;
+										v208 = v458;
+										local v459 = v207[v208];
+										local v460 = "UIStroke";
+										v209 = v459;
+										v210 = v460;
+										local v461 = v209[v210];
+										local v462 = TweenInfo.new;
+										local v463 = 0.3;
+										v211 = v463;
+										v212 = v307;
+										local v464 = v211 * v212;
+										v213 = v462;
+										v214 = v464;
+										local v465 = v213(v214);
+										local v466 = {};
+										local v467 = 0;
+										local v468 = "Transparency";
+										v215 = v466;
+										v216 = v468;
+										v217 = v467;
+										v215[v216] = v217;
+										local v469 = "Create";
+										v218 = v457;
+										local v470 = v218;
+										v219 = v457;
+										v220 = v469;
+										local v471 = v219[v220];
+										v221 = v471;
+										v222 = v470;
+										v223 = v461;
+										v224 = v465;
+										v225 = v466;
+										local v472 = v221(v222, v223, v224, v225);
+										local v473 = "Play";
+										v226 = v472;
+										local v474 = v226;
+										v227 = v472;
+										v228 = v473;
+										local v475 = v227[v228];
+										v229 = v475;
+										v230 = v474;
+										v229(v230);
+										local v476 = "TweenService";
+										v231 = p3;
+										v232 = v476;
+										local v477 = v231[v232];
+										local v478 = "OpenRarity";
+										v233 = v308;
+										v234 = v478;
+										local v479 = v233[v234];
+										local v480 = TweenInfo.new;
+										local v481 = 0.3;
+										v235 = v481;
+										v236 = v307;
+										local v482 = v235 * v236;
+										v237 = v480;
+										v238 = v482;
+										local v483 = v237(v238);
+										local v484 = {};
+										local v485 = 0;
+										local v486 = "TextTransparency";
+										v239 = v484;
+										v240 = v486;
+										v241 = v485;
+										v239[v240] = v241;
+										local v487 = "Create";
+										v242 = v477;
+										local v488 = v242;
+										v243 = v477;
+										v244 = v487;
+										local v489 = v243[v244];
+										v245 = v489;
+										v246 = v488;
+										v247 = v479;
+										v248 = v483;
+										v249 = v484;
+										local v490 = v245(v246, v247, v248, v249);
+										local v491 = "Play";
+										v250 = v490;
+										local v492 = v250;
+										v251 = v490;
+										v252 = v491;
+										local v493 = v251[v252];
+										v253 = v493;
+										v254 = v492;
+										v253(v254);
+										local v494 = "TweenService";
+										v255 = p3;
+										v256 = v494;
+										local v495 = v255[v256];
+										local v496 = "OpenRarity";
+										v257 = v308;
+										v258 = v496;
+										local v497 = v257[v258];
+										local v498 = "UIStroke";
+										v259 = v497;
+										v260 = v498;
+										local v499 = v259[v260];
+										local v500 = TweenInfo.new;
+										local v501 = 0.3;
+										v261 = v501;
+										v262 = v307;
+										local v502 = v261 * v262;
+										v263 = v500;
+										v264 = v502;
+										local v503 = v263(v264);
+										local v504 = {};
+										local v505 = 0;
+										local v506 = "Transparency";
+										v265 = v504;
+										v266 = v506;
+										v267 = v505;
+										v265[v266] = v267;
+										local v507 = "Create";
+										v268 = v495;
+										local v508 = v268;
+										v269 = v495;
+										v270 = v507;
+										local v509 = v269[v270];
+										v271 = v509;
+										v272 = v508;
+										v273 = v499;
+										v274 = v503;
+										v275 = v504;
+										local v510 = v271(v272, v273, v274, v275);
+										local v511 = "Play";
+										v276 = v510;
+										local v512 = v276;
+										v277 = v510;
+										v278 = v511;
+										local v513 = v277[v278];
+										v279 = v513;
+										v280 = v512;
+										v279(v280);
+										local v514 = wait;
+										local v515 = 0.5;
+										v281 = v515;
+										v282 = v307;
+										local v516 = v281 * v282;
+										v283 = v514;
+										v284 = v516;
+										v283(v284);
+										local v517 = "Parent";
+										v285 = v308;
+										v286 = v517;
+										local v518 = v285[v286];
+										v287 = v518;
+										if not v287 then
+											return;
+										else
+											v288 = p7;
+											if v288 then
+												v308.ShinyLabel.Text = "Shiny!";
+												p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+													TextTransparency = 0, 
+													TextStrokeTransparency = 0.3
+												}):Play();
+												wait(0.2 * v307);
+												p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+													Offset = Vector2.new(0.2, 0)
+												}):Play();
+												wait(0.2 * v307);
+											end;
+											local v519 = "Parent";
+											v289 = v308;
+											v290 = v519;
+											local v520 = v289[v290];
+											v291 = v520;
+											if not v291 then
+												return;
+											else
+												local v521 = pairs;
+												local v522 = "Stars";
+												v292 = v308;
+												v293 = v522;
+												local v523 = v292[v293];
+												local v524 = "GetChildren";
+												v294 = v523;
+												local v525 = v294;
+												v295 = v523;
+												v296 = v524;
+												local v526 = v295[v296];
+												v297 = v526;
+												v298 = v525;
+												v300 = v297(v298);
+												v299 = v521;
+												local v527, v528, v529 = v299(v300);
+												while true do
+													if local v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+														if u5 <= p6 then
+															p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + local v531 / 10);
+														end;
+														v530.Visible = true;
+														p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+															ImageTransparency = 0
+														}):Play();
+														wait(0.6 * v307);
+														if not v308.Parent then
+															return;
+														end;
+													end;												
+												end;
+												local v532 = u5;
+												v301 = v532;
+												v302 = p6;
+												if v301 <= v302 and not u3 then
+													wait(1 * v307);
+													if not v308.Parent then
+														return;
+													else
+														for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+															if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+																p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+																	ImageTransparency = 1
+																}):Play();
+																p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+																	TextTransparency = 1
+																}):Play();
+																p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+																	Transparency = 1
+																}):Play();
+																p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+																	TextTransparency = 1
+																}):Play();
+																p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+																	TextTransparency = 1
+																}):Play();
+																p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+																	Transparency = 1
+																}):Play();
+																p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+																	TextTransparency = 1
+																}):Play();
+																for v535, v536 in pairs(v534.Stars:GetChildren()) do
+																	if v536:IsA("ImageButton") then
+																		p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+																			ImageTransparency = 1
+																		}):Play();
+																	end;
+																end;
+																task.delay(0.3 * v307, function()
+																	u3 = true;
+																	wait(1);
+																	if u9 then
+																		u9:Disconnect();
+																	end;
+																	if v534 then
+																		v534:Destroy();
+																	end;
+																end);
+															end;
+														end;
+														return;
+													end;
+												else
+													return;
+												end;
+											end;
+										end;
+									end;
+								end;
+							end;
+						end;
+					end;
+				end;
+			elseif not (v320 > 12) then
+				if not v308.Parent then
+					return;
+				else
+					p3.Tween:Model(v318, TweenInfo.new(0.4 * v307, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+						Value = CFrame.new(0, 0, -4) * CFrame.Angles(0, math.pi, 0)
+					});
+					for v323, v324 in pairs(v318:GetChildren()) do
+						p3.TweenService:Create(v324, TweenInfo.new(0.25 * v307), {
+							Transparency = 1
+						}):Play();
+					end;
+					task.delay(0.25 * v307, function()
+						v318:Destroy();
+					end);
+					v8 = "Parent";
+					v9 = v308;
+					v10 = v8;
+					v11 = v9[v10];
+					v12 = v11;
+					if not v12 then
+						return;
+					else
+						v325 = "Assets";
+						v13 = p3;
+						v14 = v325;
+						v15 = v13[v14];
+						v326 = "Pets";
+						v16 = v15;
+						v17 = v326;
+						v18 = v16[v17];
+						v19 = v18;
+						v20 = p4;
+						v327 = v19[v20];
+						v328 = "Clone";
+						v21 = v327;
+						v329 = v21;
+						v22 = v327;
+						v23 = v328;
+						v330 = v22[v23];
+						v24 = v330;
+						v25 = v329;
+						v331 = v24(v25);
+						v332 = "ViewportFrame";
+						v26 = v308;
+						v27 = v332;
+						v333 = v26[v27];
+						v334 = "Parent";
+						v28 = v331;
+						v29 = v334;
+						v30 = v333;
+						v28[v29] = v30;
+						v31 = CFrame.new;
+						v32 = 0;
+						v33 = 0;
+						v34 = -6;
+						v35 = v31;
+						v36 = v32;
+						v37 = v33;
+						v38 = v34;
+						v335 = v35(v36, v37, v38);
+						v336 = CFrame.Angles;
+						v337 = 0;
+						v338 = math.pi;
+						v39 = 0;
+						v40 = v336;
+						v41 = v337;
+						v42 = v338;
+						v43 = v39;
+						v339 = v40(v41, v42, v43);
+						v44 = v335;
+						v45 = v339;
+						v49 = v44 * v45;
+						v340 = "SetPrimaryPartCFrame";
+						v46 = v331;
+						v341 = v46;
+						v47 = v331;
+						v48 = v340;
+						v342 = v47[v48];
+						v50 = v342;
+						v51 = v341;
+						v52 = v49;
+						v50(v51, v52);
+						v53 = p8;
+						if v53 then
+							wait(0.3);
+						end;
+						v343 = "Parent";
+						v54 = v308;
+						v55 = v343;
+						v344 = v54[v55];
+						v56 = v344;
+						if not v56 then
+							return;
+						else
+							v345 = "Tween";
+							v57 = p3;
+							v58 = v345;
+							v346 = v57[v58];
+							v59 = v331;
+							v347 = v59;
+							v348 = TweenInfo.new;
+							v349 = 0.3;
+							v60 = v349;
+							v61 = v307;
+							v350 = v60 * v61;
+							v351 = Enum.EasingStyle.Quint;
+							v352 = Enum.EasingDirection.Out;
+							v62 = v348;
+							v63 = v350;
+							v64 = v351;
+							v65 = v352;
+							v353 = v62(v63, v64, v65);
+							v354 = {};
+							v355 = CFrame.new;
+							v356 = 0;
+							v66 = 0;
+							v67 = -2;
+							v68 = v355;
+							v69 = v356;
+							v70 = v66;
+							v71 = v67;
+							v357 = v68(v69, v70, v71);
+							v358 = CFrame.Angles;
+							v359 = 0;
+							v360 = math.pi;
+							v72 = 0;
+							v73 = v358;
+							v74 = v359;
+							v75 = v360;
+							v76 = v72;
+							v361 = v73(v74, v75, v76);
+							v77 = v357;
+							v78 = v361;
+							v362 = v77 * v78;
+							v363 = "Value";
+							v79 = v354;
+							v80 = v363;
+							v81 = v362;
+							v79[v80] = v81;
+							v364 = "Model";
+							v82 = v346;
+							v365 = v82;
+							v83 = v346;
+							v84 = v364;
+							v366 = v83[v84];
+							v85 = v366;
+							v86 = v365;
+							v87 = v347;
+							v88 = v353;
+							v89 = v354;
+							v85(v86, v87, v88, v89);
+							v367 = 1;
+							v90 = p5;
+							v91 = v367;
+							if v90 == v91 then
+								if v303[p4].Rarity == "Secret" then
+									p3.Sound.PlayLocalSound(p3.Sounds.Effects.SecretOpen);
+								else
+									p3.Sound.PlayLocalSound(p3.Sounds.Effects.PetJingle);
+								end;
+							end;
+							v368 = "Replica";
+							v92 = p3;
+							v93 = v368;
+							v369 = v92[v93];
+							v370 = "Data";
+							v94 = v369;
+							v95 = v370;
+							v371 = v94[v95];
+							v372 = "Settings";
+							v96 = v371;
+							v97 = v372;
+							v373 = v96[v97];
+							v374 = "Lite Graphics";
+							v98 = v373;
+							v99 = v374;
+							v375 = v98[v99];
+							v100 = v375;
+							if not v100 then
+								v376 = v306.new(v308.Parent["Particles" .. tostring(p5)], v308.Parent.Sparkle);
+								v376.rate = 100;
+								function v376.onSpawn(p9)
+									p9.element.Visible = true;
+									p9.element.ImageColor3 = u4[v303[p4].Rarity];
+									p9.velocity = Vector2.new(math.random(-800, 800), math.random(-800, 800));
+									p3.TweenService:Create(p9.element, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+										ImageTransparency = 1
+									}):Play();
+									p9.element:TweenSize(UDim2.new(0.1, 0, 1.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5);
+									task.delay(0.5, function()
+										p9.element:TweenSize(UDim2.new(0.04, 0, 0.08, 0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.5);
+									end);
+									p9.maxAge = 1.5;
+								end;
+								function v376.onUpdate(p10, p11)
+									p10.velocity = p10.velocity;
+									p10.position = p10.position - p10.velocity / 3 * p11;
+								end;
+								task.delay(0.3, function()
+									v376.rate = 0;
+									wait(10);
+									v376:Destroy();
+								end);
+							end;
+							v377 = wait;
+							v378 = 0.3;
+							v101 = v378;
+							v102 = v307;
+							v379 = v101 * v102;
+							v103 = v377;
+							v104 = v379;
+							v103(v104);
+							v380 = "Parent";
+							v105 = v308;
+							v106 = v380;
+							v381 = v105[v106];
+							v107 = v381;
+							if not v107 then
+								return;
+							else
+								v382 = nil;
+								v383 = 0;
+								v384 = "RunService";
+								v108 = p3;
+								v109 = v384;
+								v385 = v108[v109];
+								v386 = "RenderStepped";
+								v110 = v385;
+								v111 = v386;
+								v387 = v110[v111];
+								u8 = v331;
+								u9 = v382;
+								u10 = v383;
+								v388 = function()
+									if not u8.Parent then
+										u9:Disconnect();
+										return;
+									end;
+									if not u8.PrimaryPart then
+										u9:Disconnect();
+										return;
+									end;
+									if not u8.PrimaryPart.Parent then
+										u9:Disconnect();
+										return;
+									end;
+									u10 = math.min(3, u10 + 0.035);
+									u8:SetPrimaryPartCFrame(u8:GetPrimaryPartCFrame() * CFrame.Angles(0, math.rad(u10), 0));
+								end;
+								v389 = "Connect";
+								v112 = v387;
+								v390 = v112;
+								v113 = v387;
+								v114 = v389;
+								v391 = v113[v114];
+								v115 = v391;
+								v116 = v390;
+								v117 = v388;
+								v392 = v115(v116, v117);
+								v118 = v392;
+								u9 = v118;
+								v393 = "TweenService";
+								v119 = p3;
+								v120 = v393;
+								v394 = v119[v120];
+								v395 = "ViewportFrame";
+								v121 = v308;
+								v122 = v395;
+								v396 = v121[v122];
+								v397 = TweenInfo.new;
+								v398 = 0.3;
+								v123 = v398;
+								v124 = v307;
+								v399 = v123 * v124;
+								v125 = v397;
+								v126 = v399;
+								v400 = v125(v126);
+								v401 = {};
+								v402 = Color3.new;
+								v403 = 1;
+								v404 = 1;
+								v405 = 1;
+								v127 = v402;
+								v128 = v403;
+								v129 = v404;
+								v130 = v405;
+								v406 = v127(v128, v129, v130);
+								v407 = "ImageColor3";
+								v131 = v401;
+								v132 = v407;
+								v133 = v406;
+								v131[v132] = v133;
+								v408 = "Create";
+								v134 = v394;
+								v409 = v134;
+								v135 = v394;
+								v136 = v408;
+								v410 = v135[v136];
+								v137 = v410;
+								v138 = v409;
+								v139 = v396;
+								v140 = v400;
+								v141 = v401;
+								v411 = v137(v138, v139, v140, v141);
+								v412 = "Play";
+								v142 = v411;
+								v413 = v142;
+								v143 = v411;
+								v144 = v412;
+								v414 = v143[v144];
+								v145 = v414;
+								v146 = v413;
+								v145(v146);
+								v415 = 1;
+								v147 = p5;
+								v148 = v415;
+								if v147 == v148 then
+
+								end;
+								v416 = wait;
+								v417 = 0.5;
+								v149 = v417;
+								v150 = v307;
+								v418 = v149 * v150;
+								v151 = v416;
+								v152 = v418;
+								v151(v152);
+								v419 = "Parent";
+								v153 = v308;
+								v154 = v419;
+								v420 = v153[v154];
+								v155 = v420;
+								if not v155 then
+									return;
+								else
+									v421 = "OpenLabel";
+									v156 = v308;
+									v157 = v421;
+									v422 = v156[v157];
+									v423 = "Text";
+									v158 = v422;
+									v159 = v423;
+									v160 = p4;
+									v158[v159] = v160;
+									v424 = "OpenRarity";
+									v161 = v308;
+									v162 = v424;
+									v425 = v161[v162];
+									v426 = u4;
+									v163 = v303;
+									v164 = p4;
+									v427 = v163[v164];
+									v428 = "Rarity";
+									v165 = v427;
+									v166 = v428;
+									v429 = v165[v166];
+									v167 = v426;
+									v168 = v429;
+									v430 = v167[v168];
+									v431 = "TextColor3";
+									v169 = v425;
+									v170 = v431;
+									v171 = v430;
+									v169[v170] = v171;
+									v432 = "OpenRarity";
+									v172 = v308;
+									v173 = v432;
+									v433 = v172[v173];
+									v174 = v303;
+									v175 = p4;
+									v434 = v174[v175];
+									v435 = "Rarity";
+									v176 = v434;
+									v177 = v435;
+									v436 = v176[v177];
+									v437 = "Text";
+									v178 = v433;
+									v179 = v437;
+									v180 = v436;
+									v178[v179] = v180;
+									v438 = "TweenService";
+									v181 = p3;
+									v182 = v438;
+									v439 = v181[v182];
+									v440 = "OpenLabel";
+									v183 = v308;
+									v184 = v440;
+									v441 = v183[v184];
+									v442 = TweenInfo.new;
+									v443 = 0.3;
+									v185 = v443;
+									v186 = v307;
+									v444 = v185 * v186;
+									v187 = v442;
+									v188 = v444;
+									v445 = v187(v188);
+									v446 = {};
+									v447 = 0;
+									v448 = "TextTransparency";
+									v189 = v446;
+									v190 = v448;
+									v191 = v447;
+									v189[v190] = v191;
+									v449 = "Create";
+									v192 = v439;
+									v450 = v192;
+									v193 = v439;
+									v194 = v449;
+									v451 = v193[v194];
+									v195 = v451;
+									v196 = v450;
+									v197 = v441;
+									v198 = v445;
+									v199 = v446;
+									v452 = v195(v196, v197, v198, v199);
+									v453 = "Play";
+									v200 = v452;
+									v454 = v200;
+									v201 = v452;
+									v202 = v453;
+									v455 = v201[v202];
+									v203 = v455;
+									v204 = v454;
+									v203(v204);
+									v456 = "TweenService";
+									v205 = p3;
+									v206 = v456;
+									v457 = v205[v206];
+									v458 = "OpenLabel";
+									v207 = v308;
+									v208 = v458;
+									v459 = v207[v208];
+									v460 = "UIStroke";
+									v209 = v459;
+									v210 = v460;
+									v461 = v209[v210];
+									v462 = TweenInfo.new;
+									v463 = 0.3;
+									v211 = v463;
+									v212 = v307;
+									v464 = v211 * v212;
+									v213 = v462;
+									v214 = v464;
+									v465 = v213(v214);
+									v466 = {};
+									v467 = 0;
+									v468 = "Transparency";
+									v215 = v466;
+									v216 = v468;
+									v217 = v467;
+									v215[v216] = v217;
+									v469 = "Create";
+									v218 = v457;
+									v470 = v218;
+									v219 = v457;
+									v220 = v469;
+									v471 = v219[v220];
+									v221 = v471;
+									v222 = v470;
+									v223 = v461;
+									v224 = v465;
+									v225 = v466;
+									v472 = v221(v222, v223, v224, v225);
+									v473 = "Play";
+									v226 = v472;
+									v474 = v226;
+									v227 = v472;
+									v228 = v473;
+									v475 = v227[v228];
+									v229 = v475;
+									v230 = v474;
+									v229(v230);
+									v476 = "TweenService";
+									v231 = p3;
+									v232 = v476;
+									v477 = v231[v232];
+									v478 = "OpenRarity";
+									v233 = v308;
+									v234 = v478;
+									v479 = v233[v234];
+									v480 = TweenInfo.new;
+									v481 = 0.3;
+									v235 = v481;
+									v236 = v307;
+									v482 = v235 * v236;
+									v237 = v480;
+									v238 = v482;
+									v483 = v237(v238);
+									v484 = {};
+									v485 = 0;
+									v486 = "TextTransparency";
+									v239 = v484;
+									v240 = v486;
+									v241 = v485;
+									v239[v240] = v241;
+									v487 = "Create";
+									v242 = v477;
+									v488 = v242;
+									v243 = v477;
+									v244 = v487;
+									v489 = v243[v244];
+									v245 = v489;
+									v246 = v488;
+									v247 = v479;
+									v248 = v483;
+									v249 = v484;
+									v490 = v245(v246, v247, v248, v249);
+									v491 = "Play";
+									v250 = v490;
+									v492 = v250;
+									v251 = v490;
+									v252 = v491;
+									v493 = v251[v252];
+									v253 = v493;
+									v254 = v492;
+									v253(v254);
+									v494 = "TweenService";
+									v255 = p3;
+									v256 = v494;
+									v495 = v255[v256];
+									v496 = "OpenRarity";
+									v257 = v308;
+									v258 = v496;
+									v497 = v257[v258];
+									v498 = "UIStroke";
+									v259 = v497;
+									v260 = v498;
+									v499 = v259[v260];
+									v500 = TweenInfo.new;
+									v501 = 0.3;
+									v261 = v501;
+									v262 = v307;
+									v502 = v261 * v262;
+									v263 = v500;
+									v264 = v502;
+									v503 = v263(v264);
+									v504 = {};
+									v505 = 0;
+									v506 = "Transparency";
+									v265 = v504;
+									v266 = v506;
+									v267 = v505;
+									v265[v266] = v267;
+									v507 = "Create";
+									v268 = v495;
+									v508 = v268;
+									v269 = v495;
+									v270 = v507;
+									v509 = v269[v270];
+									v271 = v509;
+									v272 = v508;
+									v273 = v499;
+									v274 = v503;
+									v275 = v504;
+									v510 = v271(v272, v273, v274, v275);
+									v511 = "Play";
+									v276 = v510;
+									v512 = v276;
+									v277 = v510;
+									v278 = v511;
+									v513 = v277[v278];
+									v279 = v513;
+									v280 = v512;
+									v279(v280);
+									v514 = wait;
+									v515 = 0.5;
+									v281 = v515;
+									v282 = v307;
+									v516 = v281 * v282;
+									v283 = v514;
+									v284 = v516;
+									v283(v284);
+									v517 = "Parent";
+									v285 = v308;
+									v286 = v517;
+									v518 = v285[v286];
+									v287 = v518;
+									if not v287 then
+										return;
+									else
+										v288 = p7;
+										if v288 then
+											v308.ShinyLabel.Text = "Shiny!";
+											p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+												TextTransparency = 0, 
+												TextStrokeTransparency = 0.3
+											}):Play();
+											wait(0.2 * v307);
+											p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+												Offset = Vector2.new(0.2, 0)
+											}):Play();
+											wait(0.2 * v307);
+										end;
+										v519 = "Parent";
+										v289 = v308;
+										v290 = v519;
+										v520 = v289[v290];
+										v291 = v520;
+										if not v291 then
+											return;
+										else
+											v521 = pairs;
+											v522 = "Stars";
+											v292 = v308;
+											v293 = v522;
+											v523 = v292[v293];
+											v524 = "GetChildren";
+											v294 = v523;
+											v525 = v294;
+											v295 = v523;
+											v296 = v524;
+											v526 = v295[v296];
+											v297 = v526;
+											v298 = v525;
+											v300 = v297(v298);
+											v299 = v521;
+											v527, v528, v529 = v299(v300);
+											while true do
+												if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+													if u5 <= p6 then
+														p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+													end;
+													v530.Visible = true;
+													p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+														ImageTransparency = 0
+													}):Play();
+													wait(0.6 * v307);
+													if not v308.Parent then
+														return;
+													end;
+												end;											
+											end;
+											v532 = u5;
+											v301 = v532;
+											v302 = p6;
+											if v301 <= v302 and not u3 then
+												wait(1 * v307);
+												if not v308.Parent then
+													return;
+												else
+													for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+														if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+															p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+																ImageTransparency = 1
+															}):Play();
+															p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+																TextTransparency = 1
+															}):Play();
+															p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+																Transparency = 1
+															}):Play();
+															p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+																TextTransparency = 1
+															}):Play();
+															p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+																TextTransparency = 1
+															}):Play();
+															p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+																Transparency = 1
+															}):Play();
+															p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+																TextTransparency = 1
+															}):Play();
+															for v535, v536 in pairs(v534.Stars:GetChildren()) do
+																if v536:IsA("ImageButton") then
+																	p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+																		ImageTransparency = 1
+																	}):Play();
+																end;
+															end;
+															task.delay(0.3 * v307, function()
+																u3 = true;
+																wait(1);
+																if u9 then
+																	u9:Disconnect();
+																end;
+																if v534 then
+																	v534:Destroy();
+																end;
+															end);
+														end;
+													end;
+													return;
+												end;
+											else
+												return;
+											end;
+										end;
+									end;
+								end;
+							end;
+						end;
+					end;
+				end;
+			end;
+			v320 = v320 + 1;		
+		end;
+		return;
+	else
+		p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+			TextTransparency = 0
+		}):Play();
+		wait(0.5 * v307);
+	end;
+	v8 = "Parent";
+	v9 = v308;
+	v10 = v8;
+	v11 = v9[v10];
+	v12 = v11;
+	if not v12 then
+		return;
+	else
+		v325 = "Assets";
+		v13 = p3;
+		v14 = v325;
+		v15 = v13[v14];
+		v326 = "Pets";
+		v16 = v15;
+		v17 = v326;
+		v18 = v16[v17];
+		v19 = v18;
+		v20 = p4;
+		v327 = v19[v20];
+		v328 = "Clone";
+		v21 = v327;
+		v329 = v21;
+		v22 = v327;
+		v23 = v328;
+		v330 = v22[v23];
+		v24 = v330;
+		v25 = v329;
+		v331 = v24(v25);
+		v332 = "ViewportFrame";
+		v26 = v308;
+		v27 = v332;
+		v333 = v26[v27];
+		v334 = "Parent";
+		v28 = v331;
+		v29 = v334;
+		v30 = v333;
+		v28[v29] = v30;
+		v31 = CFrame.new;
+		v32 = 0;
+		v33 = 0;
+		v34 = -6;
+		v35 = v31;
+		v36 = v32;
+		v37 = v33;
+		v38 = v34;
+		v335 = v35(v36, v37, v38);
+		v336 = CFrame.Angles;
+		v337 = 0;
+		v338 = math.pi;
+		v39 = 0;
+		v40 = v336;
+		v41 = v337;
+		v42 = v338;
+		v43 = v39;
+		v339 = v40(v41, v42, v43);
+		v44 = v335;
+		v45 = v339;
+		v49 = v44 * v45;
+		v340 = "SetPrimaryPartCFrame";
+		v46 = v331;
+		v341 = v46;
+		v47 = v331;
+		v48 = v340;
+		v342 = v47[v48];
+		v50 = v342;
+		v51 = v341;
+		v52 = v49;
+		v50(v51, v52);
+		v53 = p8;
+		if v53 then
+			wait(0.3);
+		end;
+		v343 = "Parent";
+		v54 = v308;
+		v55 = v343;
+		v344 = v54[v55];
+		v56 = v344;
+		if not v56 then
+			return;
+		else
+			v345 = "Tween";
+			v57 = p3;
+			v58 = v345;
+			v346 = v57[v58];
+			v59 = v331;
+			v347 = v59;
+			v348 = TweenInfo.new;
+			v349 = 0.3;
+			v60 = v349;
+			v61 = v307;
+			v350 = v60 * v61;
+			v351 = Enum.EasingStyle.Quint;
+			v352 = Enum.EasingDirection.Out;
+			v62 = v348;
+			v63 = v350;
+			v64 = v351;
+			v65 = v352;
+			v353 = v62(v63, v64, v65);
+			v354 = {};
+			v355 = CFrame.new;
+			v356 = 0;
+			v66 = 0;
+			v67 = -2;
+			v68 = v355;
+			v69 = v356;
+			v70 = v66;
+			v71 = v67;
+			v357 = v68(v69, v70, v71);
+			v358 = CFrame.Angles;
+			v359 = 0;
+			v360 = math.pi;
+			v72 = 0;
+			v73 = v358;
+			v74 = v359;
+			v75 = v360;
+			v76 = v72;
+			v361 = v73(v74, v75, v76);
+			v77 = v357;
+			v78 = v361;
+			v362 = v77 * v78;
+			v363 = "Value";
+			v79 = v354;
+			v80 = v363;
+			v81 = v362;
+			v79[v80] = v81;
+			v364 = "Model";
+			v82 = v346;
+			v365 = v82;
+			v83 = v346;
+			v84 = v364;
+			v366 = v83[v84];
+			v85 = v366;
+			v86 = v365;
+			v87 = v347;
+			v88 = v353;
+			v89 = v354;
+			v85(v86, v87, v88, v89);
+			v367 = 1;
+			v90 = p5;
+			v91 = v367;
+			if v90 == v91 then
+				if v303[p4].Rarity == "Secret" then
+					p3.Sound.PlayLocalSound(p3.Sounds.Effects.SecretOpen);
+				else
+					p3.Sound.PlayLocalSound(p3.Sounds.Effects.PetJingle);
+				end;
+			end;
+			v368 = "Replica";
+			v92 = p3;
+			v93 = v368;
+			v369 = v92[v93];
+			v370 = "Data";
+			v94 = v369;
+			v95 = v370;
+			v371 = v94[v95];
+			v372 = "Settings";
+			v96 = v371;
+			v97 = v372;
+			v373 = v96[v97];
+			v374 = "Lite Graphics";
+			v98 = v373;
+			v99 = v374;
+			v375 = v98[v99];
+			v100 = v375;
+			if not v100 then
+				v376 = v306.new(v308.Parent["Particles" .. tostring(p5)], v308.Parent.Sparkle);
+				v376.rate = 100;
+				function v376.onSpawn(p9)
+					p9.element.Visible = true;
+					p9.element.ImageColor3 = u4[v303[p4].Rarity];
+					p9.velocity = Vector2.new(math.random(-800, 800), math.random(-800, 800));
+					p3.TweenService:Create(p9.element, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+						ImageTransparency = 1
+					}):Play();
+					p9.element:TweenSize(UDim2.new(0.1, 0, 1.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5);
+					task.delay(0.5, function()
+						p9.element:TweenSize(UDim2.new(0.04, 0, 0.08, 0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.5);
+					end);
+					p9.maxAge = 1.5;
+				end;
+				function v376.onUpdate(p10, p11)
+					p10.velocity = p10.velocity;
+					p10.position = p10.position - p10.velocity / 3 * p11;
+				end;
+				task.delay(0.3, function()
+					v376.rate = 0;
+					wait(10);
+					v376:Destroy();
+				end);
+			end;
+			v377 = wait;
+			v378 = 0.3;
+			v101 = v378;
+			v102 = v307;
+			v379 = v101 * v102;
+			v103 = v377;
+			v104 = v379;
+			v103(v104);
+			v380 = "Parent";
+			v105 = v308;
+			v106 = v380;
+			v381 = v105[v106];
+			v107 = v381;
+			if not v107 then
+				return;
+			else
+				v382 = nil;
+				v383 = 0;
+				v384 = "RunService";
+				v108 = p3;
+				v109 = v384;
+				v385 = v108[v109];
+				v386 = "RenderStepped";
+				v110 = v385;
+				v111 = v386;
+				v387 = v110[v111];
+				u8 = v331;
+				u9 = v382;
+				u10 = v383;
+				v388 = function()
+					if not u8.Parent then
+						u9:Disconnect();
+						return;
+					end;
+					if not u8.PrimaryPart then
+						u9:Disconnect();
+						return;
+					end;
+					if not u8.PrimaryPart.Parent then
+						u9:Disconnect();
+						return;
+					end;
+					u10 = math.min(3, u10 + 0.035);
+					u8:SetPrimaryPartCFrame(u8:GetPrimaryPartCFrame() * CFrame.Angles(0, math.rad(u10), 0));
+				end;
+				v389 = "Connect";
+				v112 = v387;
+				v390 = v112;
+				v113 = v387;
+				v114 = v389;
+				v391 = v113[v114];
+				v115 = v391;
+				v116 = v390;
+				v117 = v388;
+				v392 = v115(v116, v117);
+				v118 = v392;
+				u9 = v118;
+				v393 = "TweenService";
+				v119 = p3;
+				v120 = v393;
+				v394 = v119[v120];
+				v395 = "ViewportFrame";
+				v121 = v308;
+				v122 = v395;
+				v396 = v121[v122];
+				v397 = TweenInfo.new;
+				v398 = 0.3;
+				v123 = v398;
+				v124 = v307;
+				v399 = v123 * v124;
+				v125 = v397;
+				v126 = v399;
+				v400 = v125(v126);
+				v401 = {};
+				v402 = Color3.new;
+				v403 = 1;
+				v404 = 1;
+				v405 = 1;
+				v127 = v402;
+				v128 = v403;
+				v129 = v404;
+				v130 = v405;
+				v406 = v127(v128, v129, v130);
+				v407 = "ImageColor3";
+				v131 = v401;
+				v132 = v407;
+				v133 = v406;
+				v131[v132] = v133;
+				v408 = "Create";
+				v134 = v394;
+				v409 = v134;
+				v135 = v394;
+				v136 = v408;
+				v410 = v135[v136];
+				v137 = v410;
+				v138 = v409;
+				v139 = v396;
+				v140 = v400;
+				v141 = v401;
+				v411 = v137(v138, v139, v140, v141);
+				v412 = "Play";
+				v142 = v411;
+				v413 = v142;
+				v143 = v411;
+				v144 = v412;
+				v414 = v143[v144];
+				v145 = v414;
+				v146 = v413;
+				v145(v146);
+				v415 = 1;
+				v147 = p5;
+				v148 = v415;
+				if v147 == v148 then
+
+				end;
+				v416 = wait;
+				v417 = 0.5;
+				v149 = v417;
+				v150 = v307;
+				v418 = v149 * v150;
+				v151 = v416;
+				v152 = v418;
+				v151(v152);
+				v419 = "Parent";
+				v153 = v308;
+				v154 = v419;
+				v420 = v153[v154];
+				v155 = v420;
+				if not v155 then
+					return;
+				else
+					v421 = "OpenLabel";
+					v156 = v308;
+					v157 = v421;
+					v422 = v156[v157];
+					v423 = "Text";
+					v158 = v422;
+					v159 = v423;
+					v160 = p4;
+					v158[v159] = v160;
+					v424 = "OpenRarity";
+					v161 = v308;
+					v162 = v424;
+					v425 = v161[v162];
+					v426 = u4;
+					v163 = v303;
+					v164 = p4;
+					v427 = v163[v164];
+					v428 = "Rarity";
+					v165 = v427;
+					v166 = v428;
+					v429 = v165[v166];
+					v167 = v426;
+					v168 = v429;
+					v430 = v167[v168];
+					v431 = "TextColor3";
+					v169 = v425;
+					v170 = v431;
+					v171 = v430;
+					v169[v170] = v171;
+					v432 = "OpenRarity";
+					v172 = v308;
+					v173 = v432;
+					v433 = v172[v173];
+					v174 = v303;
+					v175 = p4;
+					v434 = v174[v175];
+					v435 = "Rarity";
+					v176 = v434;
+					v177 = v435;
+					v436 = v176[v177];
+					v437 = "Text";
+					v178 = v433;
+					v179 = v437;
+					v180 = v436;
+					v178[v179] = v180;
+					v438 = "TweenService";
+					v181 = p3;
+					v182 = v438;
+					v439 = v181[v182];
+					v440 = "OpenLabel";
+					v183 = v308;
+					v184 = v440;
+					v441 = v183[v184];
+					v442 = TweenInfo.new;
+					v443 = 0.3;
+					v185 = v443;
+					v186 = v307;
+					v444 = v185 * v186;
+					v187 = v442;
+					v188 = v444;
+					v445 = v187(v188);
+					v446 = {};
+					v447 = 0;
+					v448 = "TextTransparency";
+					v189 = v446;
+					v190 = v448;
+					v191 = v447;
+					v189[v190] = v191;
+					v449 = "Create";
+					v192 = v439;
+					v450 = v192;
+					v193 = v439;
+					v194 = v449;
+					v451 = v193[v194];
+					v195 = v451;
+					v196 = v450;
+					v197 = v441;
+					v198 = v445;
+					v199 = v446;
+					v452 = v195(v196, v197, v198, v199);
+					v453 = "Play";
+					v200 = v452;
+					v454 = v200;
+					v201 = v452;
+					v202 = v453;
+					v455 = v201[v202];
+					v203 = v455;
+					v204 = v454;
+					v203(v204);
+					v456 = "TweenService";
+					v205 = p3;
+					v206 = v456;
+					v457 = v205[v206];
+					v458 = "OpenLabel";
+					v207 = v308;
+					v208 = v458;
+					v459 = v207[v208];
+					v460 = "UIStroke";
+					v209 = v459;
+					v210 = v460;
+					v461 = v209[v210];
+					v462 = TweenInfo.new;
+					v463 = 0.3;
+					v211 = v463;
+					v212 = v307;
+					v464 = v211 * v212;
+					v213 = v462;
+					v214 = v464;
+					v465 = v213(v214);
+					v466 = {};
+					v467 = 0;
+					v468 = "Transparency";
+					v215 = v466;
+					v216 = v468;
+					v217 = v467;
+					v215[v216] = v217;
+					v469 = "Create";
+					v218 = v457;
+					v470 = v218;
+					v219 = v457;
+					v220 = v469;
+					v471 = v219[v220];
+					v221 = v471;
+					v222 = v470;
+					v223 = v461;
+					v224 = v465;
+					v225 = v466;
+					v472 = v221(v222, v223, v224, v225);
+					v473 = "Play";
+					v226 = v472;
+					v474 = v226;
+					v227 = v472;
+					v228 = v473;
+					v475 = v227[v228];
+					v229 = v475;
+					v230 = v474;
+					v229(v230);
+					v476 = "TweenService";
+					v231 = p3;
+					v232 = v476;
+					v477 = v231[v232];
+					v478 = "OpenRarity";
+					v233 = v308;
+					v234 = v478;
+					v479 = v233[v234];
+					v480 = TweenInfo.new;
+					v481 = 0.3;
+					v235 = v481;
+					v236 = v307;
+					v482 = v235 * v236;
+					v237 = v480;
+					v238 = v482;
+					v483 = v237(v238);
+					v484 = {};
+					v485 = 0;
+					v486 = "TextTransparency";
+					v239 = v484;
+					v240 = v486;
+					v241 = v485;
+					v239[v240] = v241;
+					v487 = "Create";
+					v242 = v477;
+					v488 = v242;
+					v243 = v477;
+					v244 = v487;
+					v489 = v243[v244];
+					v245 = v489;
+					v246 = v488;
+					v247 = v479;
+					v248 = v483;
+					v249 = v484;
+					v490 = v245(v246, v247, v248, v249);
+					v491 = "Play";
+					v250 = v490;
+					v492 = v250;
+					v251 = v490;
+					v252 = v491;
+					v493 = v251[v252];
+					v253 = v493;
+					v254 = v492;
+					v253(v254);
+					v494 = "TweenService";
+					v255 = p3;
+					v256 = v494;
+					v495 = v255[v256];
+					v496 = "OpenRarity";
+					v257 = v308;
+					v258 = v496;
+					v497 = v257[v258];
+					v498 = "UIStroke";
+					v259 = v497;
+					v260 = v498;
+					v499 = v259[v260];
+					v500 = TweenInfo.new;
+					v501 = 0.3;
+					v261 = v501;
+					v262 = v307;
+					v502 = v261 * v262;
+					v263 = v500;
+					v264 = v502;
+					v503 = v263(v264);
+					v504 = {};
+					v505 = 0;
+					v506 = "Transparency";
+					v265 = v504;
+					v266 = v506;
+					v267 = v505;
+					v265[v266] = v267;
+					v507 = "Create";
+					v268 = v495;
+					v508 = v268;
+					v269 = v495;
+					v270 = v507;
+					v509 = v269[v270];
+					v271 = v509;
+					v272 = v508;
+					v273 = v499;
+					v274 = v503;
+					v275 = v504;
+					v510 = v271(v272, v273, v274, v275);
+					v511 = "Play";
+					v276 = v510;
+					v512 = v276;
+					v277 = v510;
+					v278 = v511;
+					v513 = v277[v278];
+					v279 = v513;
+					v280 = v512;
+					v279(v280);
+					v514 = wait;
+					v515 = 0.5;
+					v281 = v515;
+					v282 = v307;
+					v516 = v281 * v282;
+					v283 = v514;
+					v284 = v516;
+					v283(v284);
+					v517 = "Parent";
+					v285 = v308;
+					v286 = v517;
+					v518 = v285[v286];
+					v287 = v518;
+					if not v287 then
+						return;
+					else
+						v288 = p7;
+						if v288 then
+							v308.ShinyLabel.Text = "Shiny!";
+							p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+								TextTransparency = 0, 
+								TextStrokeTransparency = 0.3
+							}):Play();
+							wait(0.2 * v307);
+							p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+								Offset = Vector2.new(0.2, 0)
+							}):Play();
+							wait(0.2 * v307);
+						end;
+						v519 = "Parent";
+						v289 = v308;
+						v290 = v519;
+						v520 = v289[v290];
+						v291 = v520;
+						if not v291 then
+							return;
+						else
+							v521 = pairs;
+							v522 = "Stars";
+							v292 = v308;
+							v293 = v522;
+							v523 = v292[v293];
+							v524 = "GetChildren";
+							v294 = v523;
+							v525 = v294;
+							v295 = v523;
+							v296 = v524;
+							v526 = v295[v296];
+							v297 = v526;
+							v298 = v525;
+							v300 = v297(v298);
+							v299 = v521;
+							v527, v528, v529 = v299(v300);
+							while true do
+								if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+									if u5 <= p6 then
+										p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+									end;
+									v530.Visible = true;
+									p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+										ImageTransparency = 0
+									}):Play();
+									wait(0.6 * v307);
+									if not v308.Parent then
+										return;
+									end;
+								end;							
+							end;
+							v532 = u5;
+							v301 = v532;
+							v302 = p6;
+							if v301 <= v302 and not u3 then
+								wait(1 * v307);
+								if not v308.Parent then
+									return;
+								else
+									for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+										if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+											p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+												ImageTransparency = 1
+											}):Play();
+											p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+												TextTransparency = 1
+											}):Play();
+											p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+												Transparency = 1
+											}):Play();
+											p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+												TextTransparency = 1
+											}):Play();
+											p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+												TextTransparency = 1
+											}):Play();
+											p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+												Transparency = 1
+											}):Play();
+											p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+												TextTransparency = 1
+											}):Play();
+											for v535, v536 in pairs(v534.Stars:GetChildren()) do
+												if v536:IsA("ImageButton") then
+													p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+														ImageTransparency = 1
+													}):Play();
+												end;
+											end;
+											task.delay(0.3 * v307, function()
+												u3 = true;
+												wait(1);
+												if u9 then
+													u9:Disconnect();
+												end;
+												if v534 then
+													v534:Destroy();
+												end;
+											end);
+										end;
+									end;
+									return;
+								end;
+							else
+								return;
+							end;
+						end;
+					end;
+				end;
+			end;
+		end;
+	end;
+	v325 = "Assets";
+	v13 = p3;
+	v14 = v325;
+	v15 = v13[v14];
+	v326 = "Pets";
+	v16 = v15;
+	v17 = v326;
+	v18 = v16[v17];
+	v19 = v18;
+	v20 = p4;
+	v327 = v19[v20];
+	v328 = "Clone";
+	v21 = v327;
+	v329 = v21;
+	v22 = v327;
+	v23 = v328;
+	v330 = v22[v23];
+	v24 = v330;
+	v25 = v329;
+	v331 = v24(v25);
+	v332 = "ViewportFrame";
+	v26 = v308;
+	v27 = v332;
+	v333 = v26[v27];
+	v334 = "Parent";
+	v28 = v331;
+	v29 = v334;
+	v30 = v333;
+	v28[v29] = v30;
+	v31 = CFrame.new;
+	v32 = 0;
+	v33 = 0;
+	v34 = -6;
+	v35 = v31;
+	v36 = v32;
+	v37 = v33;
+	v38 = v34;
+	v335 = v35(v36, v37, v38);
+	v336 = CFrame.Angles;
+	v337 = 0;
+	v338 = math.pi;
+	v39 = 0;
+	v40 = v336;
+	v41 = v337;
+	v42 = v338;
+	v43 = v39;
+	v339 = v40(v41, v42, v43);
+	v44 = v335;
+	v45 = v339;
+	v49 = v44 * v45;
+	v340 = "SetPrimaryPartCFrame";
+	v46 = v331;
+	v341 = v46;
+	v47 = v331;
+	v48 = v340;
+	v342 = v47[v48];
+	v50 = v342;
+	v51 = v341;
+	v52 = v49;
+	v50(v51, v52);
+	v53 = p8;
+	if v53 then
+		wait(0.3);
+	end;
+	v343 = "Parent";
+	v54 = v308;
+	v55 = v343;
+	v344 = v54[v55];
+	v56 = v344;
+	if not v56 then
+		return;
+	else
+		v345 = "Tween";
+		v57 = p3;
+		v58 = v345;
+		v346 = v57[v58];
+		v59 = v331;
+		v347 = v59;
+		v348 = TweenInfo.new;
+		v349 = 0.3;
+		v60 = v349;
+		v61 = v307;
+		v350 = v60 * v61;
+		v351 = Enum.EasingStyle.Quint;
+		v352 = Enum.EasingDirection.Out;
+		v62 = v348;
+		v63 = v350;
+		v64 = v351;
+		v65 = v352;
+		v353 = v62(v63, v64, v65);
+		v354 = {};
+		v355 = CFrame.new;
+		v356 = 0;
+		v66 = 0;
+		v67 = -2;
+		v68 = v355;
+		v69 = v356;
+		v70 = v66;
+		v71 = v67;
+		v357 = v68(v69, v70, v71);
+		v358 = CFrame.Angles;
+		v359 = 0;
+		v360 = math.pi;
+		v72 = 0;
+		v73 = v358;
+		v74 = v359;
+		v75 = v360;
+		v76 = v72;
+		v361 = v73(v74, v75, v76);
+		v77 = v357;
+		v78 = v361;
+		v362 = v77 * v78;
+		v363 = "Value";
+		v79 = v354;
+		v80 = v363;
+		v81 = v362;
+		v79[v80] = v81;
+		v364 = "Model";
+		v82 = v346;
+		v365 = v82;
+		v83 = v346;
+		v84 = v364;
+		v366 = v83[v84];
+		v85 = v366;
+		v86 = v365;
+		v87 = v347;
+		v88 = v353;
+		v89 = v354;
+		v85(v86, v87, v88, v89);
+		v367 = 1;
+		v90 = p5;
+		v91 = v367;
+		if v90 == v91 then
+			if v303[p4].Rarity == "Secret" then
+				p3.Sound.PlayLocalSound(p3.Sounds.Effects.SecretOpen);
+			else
+				p3.Sound.PlayLocalSound(p3.Sounds.Effects.PetJingle);
+			end;
+		end;
+		v368 = "Replica";
+		v92 = p3;
+		v93 = v368;
+		v369 = v92[v93];
+		v370 = "Data";
+		v94 = v369;
+		v95 = v370;
+		v371 = v94[v95];
+		v372 = "Settings";
+		v96 = v371;
+		v97 = v372;
+		v373 = v96[v97];
+		v374 = "Lite Graphics";
+		v98 = v373;
+		v99 = v374;
+		v375 = v98[v99];
+		v100 = v375;
+		if not v100 then
+			v376 = v306.new(v308.Parent["Particles" .. tostring(p5)], v308.Parent.Sparkle);
+			v376.rate = 100;
+			function v376.onSpawn(p9)
+				p9.element.Visible = true;
+				p9.element.ImageColor3 = u4[v303[p4].Rarity];
+				p9.velocity = Vector2.new(math.random(-800, 800), math.random(-800, 800));
+				p3.TweenService:Create(p9.element, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+					ImageTransparency = 1
+				}):Play();
+				p9.element:TweenSize(UDim2.new(0.1, 0, 1.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5);
+				task.delay(0.5, function()
+					p9.element:TweenSize(UDim2.new(0.04, 0, 0.08, 0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.5);
+				end);
+				p9.maxAge = 1.5;
+			end;
+			function v376.onUpdate(p10, p11)
+				p10.velocity = p10.velocity;
+				p10.position = p10.position - p10.velocity / 3 * p11;
+			end;
+			task.delay(0.3, function()
+				v376.rate = 0;
+				wait(10);
+				v376:Destroy();
+			end);
+		end;
+		v377 = wait;
+		v378 = 0.3;
+		v101 = v378;
+		v102 = v307;
+		v379 = v101 * v102;
+		v103 = v377;
+		v104 = v379;
+		v103(v104);
+		v380 = "Parent";
+		v105 = v308;
+		v106 = v380;
+		v381 = v105[v106];
+		v107 = v381;
+		if not v107 then
+			return;
+		else
+			v382 = nil;
+			v383 = 0;
+			v384 = "RunService";
+			v108 = p3;
+			v109 = v384;
+			v385 = v108[v109];
+			v386 = "RenderStepped";
+			v110 = v385;
+			v111 = v386;
+			v387 = v110[v111];
+			u8 = v331;
+			u9 = v382;
+			u10 = v383;
+			v388 = function()
+				if not u8.Parent then
+					u9:Disconnect();
+					return;
+				end;
+				if not u8.PrimaryPart then
+					u9:Disconnect();
+					return;
+				end;
+				if not u8.PrimaryPart.Parent then
+					u9:Disconnect();
+					return;
+				end;
+				u10 = math.min(3, u10 + 0.035);
+				u8:SetPrimaryPartCFrame(u8:GetPrimaryPartCFrame() * CFrame.Angles(0, math.rad(u10), 0));
+			end;
+			v389 = "Connect";
+			v112 = v387;
+			v390 = v112;
+			v113 = v387;
+			v114 = v389;
+			v391 = v113[v114];
+			v115 = v391;
+			v116 = v390;
+			v117 = v388;
+			v392 = v115(v116, v117);
+			v118 = v392;
+			u9 = v118;
+			v393 = "TweenService";
+			v119 = p3;
+			v120 = v393;
+			v394 = v119[v120];
+			v395 = "ViewportFrame";
+			v121 = v308;
+			v122 = v395;
+			v396 = v121[v122];
+			v397 = TweenInfo.new;
+			v398 = 0.3;
+			v123 = v398;
+			v124 = v307;
+			v399 = v123 * v124;
+			v125 = v397;
+			v126 = v399;
+			v400 = v125(v126);
+			v401 = {};
+			v402 = Color3.new;
+			v403 = 1;
+			v404 = 1;
+			v405 = 1;
+			v127 = v402;
+			v128 = v403;
+			v129 = v404;
+			v130 = v405;
+			v406 = v127(v128, v129, v130);
+			v407 = "ImageColor3";
+			v131 = v401;
+			v132 = v407;
+			v133 = v406;
+			v131[v132] = v133;
+			v408 = "Create";
+			v134 = v394;
+			v409 = v134;
+			v135 = v394;
+			v136 = v408;
+			v410 = v135[v136];
+			v137 = v410;
+			v138 = v409;
+			v139 = v396;
+			v140 = v400;
+			v141 = v401;
+			v411 = v137(v138, v139, v140, v141);
+			v412 = "Play";
+			v142 = v411;
+			v413 = v142;
+			v143 = v411;
+			v144 = v412;
+			v414 = v143[v144];
+			v145 = v414;
+			v146 = v413;
+			v145(v146);
+			v415 = 1;
+			v147 = p5;
+			v148 = v415;
+			if v147 == v148 then
+
+			end;
+			v416 = wait;
+			v417 = 0.5;
+			v149 = v417;
+			v150 = v307;
+			v418 = v149 * v150;
+			v151 = v416;
+			v152 = v418;
+			v151(v152);
+			v419 = "Parent";
+			v153 = v308;
+			v154 = v419;
+			v420 = v153[v154];
+			v155 = v420;
+			if not v155 then
+				return;
+			else
+				v421 = "OpenLabel";
+				v156 = v308;
+				v157 = v421;
+				v422 = v156[v157];
+				v423 = "Text";
+				v158 = v422;
+				v159 = v423;
+				v160 = p4;
+				v158[v159] = v160;
+				v424 = "OpenRarity";
+				v161 = v308;
+				v162 = v424;
+				v425 = v161[v162];
+				v426 = u4;
+				v163 = v303;
+				v164 = p4;
+				v427 = v163[v164];
+				v428 = "Rarity";
+				v165 = v427;
+				v166 = v428;
+				v429 = v165[v166];
+				v167 = v426;
+				v168 = v429;
+				v430 = v167[v168];
+				v431 = "TextColor3";
+				v169 = v425;
+				v170 = v431;
+				v171 = v430;
+				v169[v170] = v171;
+				v432 = "OpenRarity";
+				v172 = v308;
+				v173 = v432;
+				v433 = v172[v173];
+				v174 = v303;
+				v175 = p4;
+				v434 = v174[v175];
+				v435 = "Rarity";
+				v176 = v434;
+				v177 = v435;
+				v436 = v176[v177];
+				v437 = "Text";
+				v178 = v433;
+				v179 = v437;
+				v180 = v436;
+				v178[v179] = v180;
+				v438 = "TweenService";
+				v181 = p3;
+				v182 = v438;
+				v439 = v181[v182];
+				v440 = "OpenLabel";
+				v183 = v308;
+				v184 = v440;
+				v441 = v183[v184];
+				v442 = TweenInfo.new;
+				v443 = 0.3;
+				v185 = v443;
+				v186 = v307;
+				v444 = v185 * v186;
+				v187 = v442;
+				v188 = v444;
+				v445 = v187(v188);
+				v446 = {};
+				v447 = 0;
+				v448 = "TextTransparency";
+				v189 = v446;
+				v190 = v448;
+				v191 = v447;
+				v189[v190] = v191;
+				v449 = "Create";
+				v192 = v439;
+				v450 = v192;
+				v193 = v439;
+				v194 = v449;
+				v451 = v193[v194];
+				v195 = v451;
+				v196 = v450;
+				v197 = v441;
+				v198 = v445;
+				v199 = v446;
+				v452 = v195(v196, v197, v198, v199);
+				v453 = "Play";
+				v200 = v452;
+				v454 = v200;
+				v201 = v452;
+				v202 = v453;
+				v455 = v201[v202];
+				v203 = v455;
+				v204 = v454;
+				v203(v204);
+				v456 = "TweenService";
+				v205 = p3;
+				v206 = v456;
+				v457 = v205[v206];
+				v458 = "OpenLabel";
+				v207 = v308;
+				v208 = v458;
+				v459 = v207[v208];
+				v460 = "UIStroke";
+				v209 = v459;
+				v210 = v460;
+				v461 = v209[v210];
+				v462 = TweenInfo.new;
+				v463 = 0.3;
+				v211 = v463;
+				v212 = v307;
+				v464 = v211 * v212;
+				v213 = v462;
+				v214 = v464;
+				v465 = v213(v214);
+				v466 = {};
+				v467 = 0;
+				v468 = "Transparency";
+				v215 = v466;
+				v216 = v468;
+				v217 = v467;
+				v215[v216] = v217;
+				v469 = "Create";
+				v218 = v457;
+				v470 = v218;
+				v219 = v457;
+				v220 = v469;
+				v471 = v219[v220];
+				v221 = v471;
+				v222 = v470;
+				v223 = v461;
+				v224 = v465;
+				v225 = v466;
+				v472 = v221(v222, v223, v224, v225);
+				v473 = "Play";
+				v226 = v472;
+				v474 = v226;
+				v227 = v472;
+				v228 = v473;
+				v475 = v227[v228];
+				v229 = v475;
+				v230 = v474;
+				v229(v230);
+				v476 = "TweenService";
+				v231 = p3;
+				v232 = v476;
+				v477 = v231[v232];
+				v478 = "OpenRarity";
+				v233 = v308;
+				v234 = v478;
+				v479 = v233[v234];
+				v480 = TweenInfo.new;
+				v481 = 0.3;
+				v235 = v481;
+				v236 = v307;
+				v482 = v235 * v236;
+				v237 = v480;
+				v238 = v482;
+				v483 = v237(v238);
+				v484 = {};
+				v485 = 0;
+				v486 = "TextTransparency";
+				v239 = v484;
+				v240 = v486;
+				v241 = v485;
+				v239[v240] = v241;
+				v487 = "Create";
+				v242 = v477;
+				v488 = v242;
+				v243 = v477;
+				v244 = v487;
+				v489 = v243[v244];
+				v245 = v489;
+				v246 = v488;
+				v247 = v479;
+				v248 = v483;
+				v249 = v484;
+				v490 = v245(v246, v247, v248, v249);
+				v491 = "Play";
+				v250 = v490;
+				v492 = v250;
+				v251 = v490;
+				v252 = v491;
+				v493 = v251[v252];
+				v253 = v493;
+				v254 = v492;
+				v253(v254);
+				v494 = "TweenService";
+				v255 = p3;
+				v256 = v494;
+				v495 = v255[v256];
+				v496 = "OpenRarity";
+				v257 = v308;
+				v258 = v496;
+				v497 = v257[v258];
+				v498 = "UIStroke";
+				v259 = v497;
+				v260 = v498;
+				v499 = v259[v260];
+				v500 = TweenInfo.new;
+				v501 = 0.3;
+				v261 = v501;
+				v262 = v307;
+				v502 = v261 * v262;
+				v263 = v500;
+				v264 = v502;
+				v503 = v263(v264);
+				v504 = {};
+				v505 = 0;
+				v506 = "Transparency";
+				v265 = v504;
+				v266 = v506;
+				v267 = v505;
+				v265[v266] = v267;
+				v507 = "Create";
+				v268 = v495;
+				v508 = v268;
+				v269 = v495;
+				v270 = v507;
+				v509 = v269[v270];
+				v271 = v509;
+				v272 = v508;
+				v273 = v499;
+				v274 = v503;
+				v275 = v504;
+				v510 = v271(v272, v273, v274, v275);
+				v511 = "Play";
+				v276 = v510;
+				v512 = v276;
+				v277 = v510;
+				v278 = v511;
+				v513 = v277[v278];
+				v279 = v513;
+				v280 = v512;
+				v279(v280);
+				v514 = wait;
+				v515 = 0.5;
+				v281 = v515;
+				v282 = v307;
+				v516 = v281 * v282;
+				v283 = v514;
+				v284 = v516;
+				v283(v284);
+				v517 = "Parent";
+				v285 = v308;
+				v286 = v517;
+				v518 = v285[v286];
+				v287 = v518;
+				if not v287 then
+					return;
+				else
+					v288 = p7;
+					if v288 then
+						v308.ShinyLabel.Text = "Shiny!";
+						p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 0, 
+							TextStrokeTransparency = 0.3
+						}):Play();
+						wait(0.2 * v307);
+						p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+							Offset = Vector2.new(0.2, 0)
+						}):Play();
+						wait(0.2 * v307);
+					end;
+					v519 = "Parent";
+					v289 = v308;
+					v290 = v519;
+					v520 = v289[v290];
+					v291 = v520;
+					if not v291 then
+						return;
+					else
+						v521 = pairs;
+						v522 = "Stars";
+						v292 = v308;
+						v293 = v522;
+						v523 = v292[v293];
+						v524 = "GetChildren";
+						v294 = v523;
+						v525 = v294;
+						v295 = v523;
+						v296 = v524;
+						v526 = v295[v296];
+						v297 = v526;
+						v298 = v525;
+						v300 = v297(v298);
+						v299 = v521;
+						v527, v528, v529 = v299(v300);
+						while true do
+							if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+								if u5 <= p6 then
+									p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+								end;
+								v530.Visible = true;
+								p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+									ImageTransparency = 0
+								}):Play();
+								wait(0.6 * v307);
+								if not v308.Parent then
+									return;
+								end;
+							end;						
+						end;
+						v532 = u5;
+						v301 = v532;
+						v302 = p6;
+						if v301 <= v302 and not u3 then
+							wait(1 * v307);
+							if not v308.Parent then
+								return;
+							else
+								for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+									if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+										p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+											ImageTransparency = 1
+										}):Play();
+										p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+											TextTransparency = 1
+										}):Play();
+										p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+											Transparency = 1
+										}):Play();
+										p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+											TextTransparency = 1
+										}):Play();
+										p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+											TextTransparency = 1
+										}):Play();
+										p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+											Transparency = 1
+										}):Play();
+										p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+											TextTransparency = 1
+										}):Play();
+										for v535, v536 in pairs(v534.Stars:GetChildren()) do
+											if v536:IsA("ImageButton") then
+												p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+													ImageTransparency = 1
+												}):Play();
+											end;
+										end;
+										task.delay(0.3 * v307, function()
+											u3 = true;
+											wait(1);
+											if u9 then
+												u9:Disconnect();
+											end;
+											if v534 then
+												v534:Destroy();
+											end;
+										end);
+									end;
+								end;
+								return;
+							end;
+						else
+							return;
+						end;
+					end;
+				end;
+			end;
+		end;
+	end;
+	v345 = "Tween";
+	v57 = p3;
+	v58 = v345;
+	v346 = v57[v58];
+	v59 = v331;
+	v347 = v59;
+	v348 = TweenInfo.new;
+	v349 = 0.3;
+	v60 = v349;
+	v61 = v307;
+	v350 = v60 * v61;
+	v351 = Enum.EasingStyle.Quint;
+	v352 = Enum.EasingDirection.Out;
+	v62 = v348;
+	v63 = v350;
+	v64 = v351;
+	v65 = v352;
+	v353 = v62(v63, v64, v65);
+	v354 = {};
+	v355 = CFrame.new;
+	v356 = 0;
+	v66 = 0;
+	v67 = -2;
+	v68 = v355;
+	v69 = v356;
+	v70 = v66;
+	v71 = v67;
+	v357 = v68(v69, v70, v71);
+	v358 = CFrame.Angles;
+	v359 = 0;
+	v360 = math.pi;
+	v72 = 0;
+	v73 = v358;
+	v74 = v359;
+	v75 = v360;
+	v76 = v72;
+	v361 = v73(v74, v75, v76);
+	v77 = v357;
+	v78 = v361;
+	v362 = v77 * v78;
+	v363 = "Value";
+	v79 = v354;
+	v80 = v363;
+	v81 = v362;
+	v79[v80] = v81;
+	v364 = "Model";
+	v82 = v346;
+	v365 = v82;
+	v83 = v346;
+	v84 = v364;
+	v366 = v83[v84];
+	v85 = v366;
+	v86 = v365;
+	v87 = v347;
+	v88 = v353;
+	v89 = v354;
+	v85(v86, v87, v88, v89);
+	v367 = 1;
+	v90 = p5;
+	v91 = v367;
+	if v90 == v91 then
+		if v303[p4].Rarity == "Secret" then
+			p3.Sound.PlayLocalSound(p3.Sounds.Effects.SecretOpen);
+		else
+			p3.Sound.PlayLocalSound(p3.Sounds.Effects.PetJingle);
+		end;
+	end;
+	v368 = "Replica";
+	v92 = p3;
+	v93 = v368;
+	v369 = v92[v93];
+	v370 = "Data";
+	v94 = v369;
+	v95 = v370;
+	v371 = v94[v95];
+	v372 = "Settings";
+	v96 = v371;
+	v97 = v372;
+	v373 = v96[v97];
+	v374 = "Lite Graphics";
+	v98 = v373;
+	v99 = v374;
+	v375 = v98[v99];
+	v100 = v375;
+	if not v100 then
+		v376 = v306.new(v308.Parent["Particles" .. tostring(p5)], v308.Parent.Sparkle);
+		v376.rate = 100;
+		function v376.onSpawn(p9)
+			p9.element.Visible = true;
+			p9.element.ImageColor3 = u4[v303[p4].Rarity];
+			p9.velocity = Vector2.new(math.random(-800, 800), math.random(-800, 800));
+			p3.TweenService:Create(p9.element, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+				ImageTransparency = 1
+			}):Play();
+			p9.element:TweenSize(UDim2.new(0.1, 0, 1.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.5);
+			task.delay(0.5, function()
+				p9.element:TweenSize(UDim2.new(0.04, 0, 0.08, 0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.5);
+			end);
+			p9.maxAge = 1.5;
+		end;
+		function v376.onUpdate(p10, p11)
+			p10.velocity = p10.velocity;
+			p10.position = p10.position - p10.velocity / 3 * p11;
+		end;
+		task.delay(0.3, function()
+			v376.rate = 0;
+			wait(10);
+			v376:Destroy();
+		end);
+	end;
+	v377 = wait;
+	v378 = 0.3;
+	v101 = v378;
+	v102 = v307;
+	v379 = v101 * v102;
+	v103 = v377;
+	v104 = v379;
+	v103(v104);
+	v380 = "Parent";
+	v105 = v308;
+	v106 = v380;
+	v381 = v105[v106];
+	v107 = v381;
+	if not v107 then
+		return;
+	else
+		v382 = nil;
+		v383 = 0;
+		v384 = "RunService";
+		v108 = p3;
+		v109 = v384;
+		v385 = v108[v109];
+		v386 = "RenderStepped";
+		v110 = v385;
+		v111 = v386;
+		v387 = v110[v111];
+		u8 = v331;
+		u9 = v382;
+		u10 = v383;
+		v388 = function()
+			if not u8.Parent then
+				u9:Disconnect();
+				return;
+			end;
+			if not u8.PrimaryPart then
+				u9:Disconnect();
+				return;
+			end;
+			if not u8.PrimaryPart.Parent then
+				u9:Disconnect();
+				return;
+			end;
+			u10 = math.min(3, u10 + 0.035);
+			u8:SetPrimaryPartCFrame(u8:GetPrimaryPartCFrame() * CFrame.Angles(0, math.rad(u10), 0));
+		end;
+		v389 = "Connect";
+		v112 = v387;
+		v390 = v112;
+		v113 = v387;
+		v114 = v389;
+		v391 = v113[v114];
+		v115 = v391;
+		v116 = v390;
+		v117 = v388;
+		v392 = v115(v116, v117);
+		v118 = v392;
+		u9 = v118;
+		v393 = "TweenService";
+		v119 = p3;
+		v120 = v393;
+		v394 = v119[v120];
+		v395 = "ViewportFrame";
+		v121 = v308;
+		v122 = v395;
+		v396 = v121[v122];
+		v397 = TweenInfo.new;
+		v398 = 0.3;
+		v123 = v398;
+		v124 = v307;
+		v399 = v123 * v124;
+		v125 = v397;
+		v126 = v399;
+		v400 = v125(v126);
+		v401 = {};
+		v402 = Color3.new;
+		v403 = 1;
+		v404 = 1;
+		v405 = 1;
+		v127 = v402;
+		v128 = v403;
+		v129 = v404;
+		v130 = v405;
+		v406 = v127(v128, v129, v130);
+		v407 = "ImageColor3";
+		v131 = v401;
+		v132 = v407;
+		v133 = v406;
+		v131[v132] = v133;
+		v408 = "Create";
+		v134 = v394;
+		v409 = v134;
+		v135 = v394;
+		v136 = v408;
+		v410 = v135[v136];
+		v137 = v410;
+		v138 = v409;
+		v139 = v396;
+		v140 = v400;
+		v141 = v401;
+		v411 = v137(v138, v139, v140, v141);
+		v412 = "Play";
+		v142 = v411;
+		v413 = v142;
+		v143 = v411;
+		v144 = v412;
+		v414 = v143[v144];
+		v145 = v414;
+		v146 = v413;
+		v145(v146);
+		v415 = 1;
+		v147 = p5;
+		v148 = v415;
+		if v147 == v148 then
+
+		end;
+		v416 = wait;
+		v417 = 0.5;
+		v149 = v417;
+		v150 = v307;
+		v418 = v149 * v150;
+		v151 = v416;
+		v152 = v418;
+		v151(v152);
+		v419 = "Parent";
+		v153 = v308;
+		v154 = v419;
+		v420 = v153[v154];
+		v155 = v420;
+		if not v155 then
+			return;
+		else
+			v421 = "OpenLabel";
+			v156 = v308;
+			v157 = v421;
+			v422 = v156[v157];
+			v423 = "Text";
+			v158 = v422;
+			v159 = v423;
+			v160 = p4;
+			v158[v159] = v160;
+			v424 = "OpenRarity";
+			v161 = v308;
+			v162 = v424;
+			v425 = v161[v162];
+			v426 = u4;
+			v163 = v303;
+			v164 = p4;
+			v427 = v163[v164];
+			v428 = "Rarity";
+			v165 = v427;
+			v166 = v428;
+			v429 = v165[v166];
+			v167 = v426;
+			v168 = v429;
+			v430 = v167[v168];
+			v431 = "TextColor3";
+			v169 = v425;
+			v170 = v431;
+			v171 = v430;
+			v169[v170] = v171;
+			v432 = "OpenRarity";
+			v172 = v308;
+			v173 = v432;
+			v433 = v172[v173];
+			v174 = v303;
+			v175 = p4;
+			v434 = v174[v175];
+			v435 = "Rarity";
+			v176 = v434;
+			v177 = v435;
+			v436 = v176[v177];
+			v437 = "Text";
+			v178 = v433;
+			v179 = v437;
+			v180 = v436;
+			v178[v179] = v180;
+			v438 = "TweenService";
+			v181 = p3;
+			v182 = v438;
+			v439 = v181[v182];
+			v440 = "OpenLabel";
+			v183 = v308;
+			v184 = v440;
+			v441 = v183[v184];
+			v442 = TweenInfo.new;
+			v443 = 0.3;
+			v185 = v443;
+			v186 = v307;
+			v444 = v185 * v186;
+			v187 = v442;
+			v188 = v444;
+			v445 = v187(v188);
+			v446 = {};
+			v447 = 0;
+			v448 = "TextTransparency";
+			v189 = v446;
+			v190 = v448;
+			v191 = v447;
+			v189[v190] = v191;
+			v449 = "Create";
+			v192 = v439;
+			v450 = v192;
+			v193 = v439;
+			v194 = v449;
+			v451 = v193[v194];
+			v195 = v451;
+			v196 = v450;
+			v197 = v441;
+			v198 = v445;
+			v199 = v446;
+			v452 = v195(v196, v197, v198, v199);
+			v453 = "Play";
+			v200 = v452;
+			v454 = v200;
+			v201 = v452;
+			v202 = v453;
+			v455 = v201[v202];
+			v203 = v455;
+			v204 = v454;
+			v203(v204);
+			v456 = "TweenService";
+			v205 = p3;
+			v206 = v456;
+			v457 = v205[v206];
+			v458 = "OpenLabel";
+			v207 = v308;
+			v208 = v458;
+			v459 = v207[v208];
+			v460 = "UIStroke";
+			v209 = v459;
+			v210 = v460;
+			v461 = v209[v210];
+			v462 = TweenInfo.new;
+			v463 = 0.3;
+			v211 = v463;
+			v212 = v307;
+			v464 = v211 * v212;
+			v213 = v462;
+			v214 = v464;
+			v465 = v213(v214);
+			v466 = {};
+			v467 = 0;
+			v468 = "Transparency";
+			v215 = v466;
+			v216 = v468;
+			v217 = v467;
+			v215[v216] = v217;
+			v469 = "Create";
+			v218 = v457;
+			v470 = v218;
+			v219 = v457;
+			v220 = v469;
+			v471 = v219[v220];
+			v221 = v471;
+			v222 = v470;
+			v223 = v461;
+			v224 = v465;
+			v225 = v466;
+			v472 = v221(v222, v223, v224, v225);
+			v473 = "Play";
+			v226 = v472;
+			v474 = v226;
+			v227 = v472;
+			v228 = v473;
+			v475 = v227[v228];
+			v229 = v475;
+			v230 = v474;
+			v229(v230);
+			v476 = "TweenService";
+			v231 = p3;
+			v232 = v476;
+			v477 = v231[v232];
+			v478 = "OpenRarity";
+			v233 = v308;
+			v234 = v478;
+			v479 = v233[v234];
+			v480 = TweenInfo.new;
+			v481 = 0.3;
+			v235 = v481;
+			v236 = v307;
+			v482 = v235 * v236;
+			v237 = v480;
+			v238 = v482;
+			v483 = v237(v238);
+			v484 = {};
+			v485 = 0;
+			v486 = "TextTransparency";
+			v239 = v484;
+			v240 = v486;
+			v241 = v485;
+			v239[v240] = v241;
+			v487 = "Create";
+			v242 = v477;
+			v488 = v242;
+			v243 = v477;
+			v244 = v487;
+			v489 = v243[v244];
+			v245 = v489;
+			v246 = v488;
+			v247 = v479;
+			v248 = v483;
+			v249 = v484;
+			v490 = v245(v246, v247, v248, v249);
+			v491 = "Play";
+			v250 = v490;
+			v492 = v250;
+			v251 = v490;
+			v252 = v491;
+			v493 = v251[v252];
+			v253 = v493;
+			v254 = v492;
+			v253(v254);
+			v494 = "TweenService";
+			v255 = p3;
+			v256 = v494;
+			v495 = v255[v256];
+			v496 = "OpenRarity";
+			v257 = v308;
+			v258 = v496;
+			v497 = v257[v258];
+			v498 = "UIStroke";
+			v259 = v497;
+			v260 = v498;
+			v499 = v259[v260];
+			v500 = TweenInfo.new;
+			v501 = 0.3;
+			v261 = v501;
+			v262 = v307;
+			v502 = v261 * v262;
+			v263 = v500;
+			v264 = v502;
+			v503 = v263(v264);
+			v504 = {};
+			v505 = 0;
+			v506 = "Transparency";
+			v265 = v504;
+			v266 = v506;
+			v267 = v505;
+			v265[v266] = v267;
+			v507 = "Create";
+			v268 = v495;
+			v508 = v268;
+			v269 = v495;
+			v270 = v507;
+			v509 = v269[v270];
+			v271 = v509;
+			v272 = v508;
+			v273 = v499;
+			v274 = v503;
+			v275 = v504;
+			v510 = v271(v272, v273, v274, v275);
+			v511 = "Play";
+			v276 = v510;
+			v512 = v276;
+			v277 = v510;
+			v278 = v511;
+			v513 = v277[v278];
+			v279 = v513;
+			v280 = v512;
+			v279(v280);
+			v514 = wait;
+			v515 = 0.5;
+			v281 = v515;
+			v282 = v307;
+			v516 = v281 * v282;
+			v283 = v514;
+			v284 = v516;
+			v283(v284);
+			v517 = "Parent";
+			v285 = v308;
+			v286 = v517;
+			v518 = v285[v286];
+			v287 = v518;
+			if not v287 then
+				return;
+			else
+				v288 = p7;
+				if v288 then
+					v308.ShinyLabel.Text = "Shiny!";
+					p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+						TextTransparency = 0, 
+						TextStrokeTransparency = 0.3
+					}):Play();
+					wait(0.2 * v307);
+					p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+						Offset = Vector2.new(0.2, 0)
+					}):Play();
+					wait(0.2 * v307);
+				end;
+				v519 = "Parent";
+				v289 = v308;
+				v290 = v519;
+				v520 = v289[v290];
+				v291 = v520;
+				if not v291 then
+					return;
+				else
+					v521 = pairs;
+					v522 = "Stars";
+					v292 = v308;
+					v293 = v522;
+					v523 = v292[v293];
+					v524 = "GetChildren";
+					v294 = v523;
+					v525 = v294;
+					v295 = v523;
+					v296 = v524;
+					v526 = v295[v296];
+					v297 = v526;
+					v298 = v525;
+					v300 = v297(v298);
+					v299 = v521;
+					v527, v528, v529 = v299(v300);
+					while true do
+						if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+							if u5 <= p6 then
+								p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+							end;
+							v530.Visible = true;
+							p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+								ImageTransparency = 0
+							}):Play();
+							wait(0.6 * v307);
+							if not v308.Parent then
+								return;
+							end;
+						end;					
+					end;
+					v532 = u5;
+					v301 = v532;
+					v302 = p6;
+					if v301 <= v302 and not u3 then
+						wait(1 * v307);
+						if not v308.Parent then
+							return;
+						else
+							for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+								if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+									p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+										ImageTransparency = 1
+									}):Play();
+									p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+										TextTransparency = 1
+									}):Play();
+									p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+										Transparency = 1
+									}):Play();
+									p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+										TextTransparency = 1
+									}):Play();
+									p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+										TextTransparency = 1
+									}):Play();
+									p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+										Transparency = 1
+									}):Play();
+									p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+										TextTransparency = 1
+									}):Play();
+									for v535, v536 in pairs(v534.Stars:GetChildren()) do
+										if v536:IsA("ImageButton") then
+											p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+												ImageTransparency = 1
+											}):Play();
+										end;
+									end;
+									task.delay(0.3 * v307, function()
+										u3 = true;
+										wait(1);
+										if u9 then
+											u9:Disconnect();
+										end;
+										if v534 then
+											v534:Destroy();
+										end;
+									end);
+								end;
+							end;
+							return;
+						end;
+					else
+						return;
+					end;
+				end;
+			end;
+		end;
+	end;
+	v382 = nil;
+	v383 = 0;
+	v384 = "RunService";
+	v108 = p3;
+	v109 = v384;
+	v385 = v108[v109];
+	v386 = "RenderStepped";
+	v110 = v385;
+	v111 = v386;
+	v387 = v110[v111];
+	u8 = v331;
+	u9 = v382;
+	u10 = v383;
+	v388 = function()
+		if not u8.Parent then
+			u9:Disconnect();
+			return;
+		end;
+		if not u8.PrimaryPart then
+			u9:Disconnect();
+			return;
+		end;
+		if not u8.PrimaryPart.Parent then
+			u9:Disconnect();
+			return;
+		end;
+		u10 = math.min(3, u10 + 0.035);
+		u8:SetPrimaryPartCFrame(u8:GetPrimaryPartCFrame() * CFrame.Angles(0, math.rad(u10), 0));
+	end;
+	v389 = "Connect";
+	v112 = v387;
+	v390 = v112;
+	v113 = v387;
+	v114 = v389;
+	v391 = v113[v114];
+	v115 = v391;
+	v116 = v390;
+	v117 = v388;
+	v392 = v115(v116, v117);
+	v118 = v392;
+	u9 = v118;
+	v393 = "TweenService";
+	v119 = p3;
+	v120 = v393;
+	v394 = v119[v120];
+	v395 = "ViewportFrame";
+	v121 = v308;
+	v122 = v395;
+	v396 = v121[v122];
+	v397 = TweenInfo.new;
+	v398 = 0.3;
+	v123 = v398;
+	v124 = v307;
+	v399 = v123 * v124;
+	v125 = v397;
+	v126 = v399;
+	v400 = v125(v126);
+	v401 = {};
+	v402 = Color3.new;
+	v403 = 1;
+	v404 = 1;
+	v405 = 1;
+	v127 = v402;
+	v128 = v403;
+	v129 = v404;
+	v130 = v405;
+	v406 = v127(v128, v129, v130);
+	v407 = "ImageColor3";
+	v131 = v401;
+	v132 = v407;
+	v133 = v406;
+	v131[v132] = v133;
+	v408 = "Create";
+	v134 = v394;
+	v409 = v134;
+	v135 = v394;
+	v136 = v408;
+	v410 = v135[v136];
+	v137 = v410;
+	v138 = v409;
+	v139 = v396;
+	v140 = v400;
+	v141 = v401;
+	v411 = v137(v138, v139, v140, v141);
+	v412 = "Play";
+	v142 = v411;
+	v413 = v142;
+	v143 = v411;
+	v144 = v412;
+	v414 = v143[v144];
+	v145 = v414;
+	v146 = v413;
+	v145(v146);
+	v415 = 1;
+	v147 = p5;
+	v148 = v415;
+	if v147 == v148 then
+
+	end;
+	v416 = wait;
+	v417 = 0.5;
+	v149 = v417;
+	v150 = v307;
+	v418 = v149 * v150;
+	v151 = v416;
+	v152 = v418;
+	v151(v152);
+	v419 = "Parent";
+	v153 = v308;
+	v154 = v419;
+	v420 = v153[v154];
+	v155 = v420;
+	if not v155 then
+		return;
+	else
+		v421 = "OpenLabel";
+		v156 = v308;
+		v157 = v421;
+		v422 = v156[v157];
+		v423 = "Text";
+		v158 = v422;
+		v159 = v423;
+		v160 = p4;
+		v158[v159] = v160;
+		v424 = "OpenRarity";
+		v161 = v308;
+		v162 = v424;
+		v425 = v161[v162];
+		v426 = u4;
+		v163 = v303;
+		v164 = p4;
+		v427 = v163[v164];
+		v428 = "Rarity";
+		v165 = v427;
+		v166 = v428;
+		v429 = v165[v166];
+		v167 = v426;
+		v168 = v429;
+		v430 = v167[v168];
+		v431 = "TextColor3";
+		v169 = v425;
+		v170 = v431;
+		v171 = v430;
+		v169[v170] = v171;
+		v432 = "OpenRarity";
+		v172 = v308;
+		v173 = v432;
+		v433 = v172[v173];
+		v174 = v303;
+		v175 = p4;
+		v434 = v174[v175];
+		v435 = "Rarity";
+		v176 = v434;
+		v177 = v435;
+		v436 = v176[v177];
+		v437 = "Text";
+		v178 = v433;
+		v179 = v437;
+		v180 = v436;
+		v178[v179] = v180;
+		v438 = "TweenService";
+		v181 = p3;
+		v182 = v438;
+		v439 = v181[v182];
+		v440 = "OpenLabel";
+		v183 = v308;
+		v184 = v440;
+		v441 = v183[v184];
+		v442 = TweenInfo.new;
+		v443 = 0.3;
+		v185 = v443;
+		v186 = v307;
+		v444 = v185 * v186;
+		v187 = v442;
+		v188 = v444;
+		v445 = v187(v188);
+		v446 = {};
+		v447 = 0;
+		v448 = "TextTransparency";
+		v189 = v446;
+		v190 = v448;
+		v191 = v447;
+		v189[v190] = v191;
+		v449 = "Create";
+		v192 = v439;
+		v450 = v192;
+		v193 = v439;
+		v194 = v449;
+		v451 = v193[v194];
+		v195 = v451;
+		v196 = v450;
+		v197 = v441;
+		v198 = v445;
+		v199 = v446;
+		v452 = v195(v196, v197, v198, v199);
+		v453 = "Play";
+		v200 = v452;
+		v454 = v200;
+		v201 = v452;
+		v202 = v453;
+		v455 = v201[v202];
+		v203 = v455;
+		v204 = v454;
+		v203(v204);
+		v456 = "TweenService";
+		v205 = p3;
+		v206 = v456;
+		v457 = v205[v206];
+		v458 = "OpenLabel";
+		v207 = v308;
+		v208 = v458;
+		v459 = v207[v208];
+		v460 = "UIStroke";
+		v209 = v459;
+		v210 = v460;
+		v461 = v209[v210];
+		v462 = TweenInfo.new;
+		v463 = 0.3;
+		v211 = v463;
+		v212 = v307;
+		v464 = v211 * v212;
+		v213 = v462;
+		v214 = v464;
+		v465 = v213(v214);
+		v466 = {};
+		v467 = 0;
+		v468 = "Transparency";
+		v215 = v466;
+		v216 = v468;
+		v217 = v467;
+		v215[v216] = v217;
+		v469 = "Create";
+		v218 = v457;
+		v470 = v218;
+		v219 = v457;
+		v220 = v469;
+		v471 = v219[v220];
+		v221 = v471;
+		v222 = v470;
+		v223 = v461;
+		v224 = v465;
+		v225 = v466;
+		v472 = v221(v222, v223, v224, v225);
+		v473 = "Play";
+		v226 = v472;
+		v474 = v226;
+		v227 = v472;
+		v228 = v473;
+		v475 = v227[v228];
+		v229 = v475;
+		v230 = v474;
+		v229(v230);
+		v476 = "TweenService";
+		v231 = p3;
+		v232 = v476;
+		v477 = v231[v232];
+		v478 = "OpenRarity";
+		v233 = v308;
+		v234 = v478;
+		v479 = v233[v234];
+		v480 = TweenInfo.new;
+		v481 = 0.3;
+		v235 = v481;
+		v236 = v307;
+		v482 = v235 * v236;
+		v237 = v480;
+		v238 = v482;
+		v483 = v237(v238);
+		v484 = {};
+		v485 = 0;
+		v486 = "TextTransparency";
+		v239 = v484;
+		v240 = v486;
+		v241 = v485;
+		v239[v240] = v241;
+		v487 = "Create";
+		v242 = v477;
+		v488 = v242;
+		v243 = v477;
+		v244 = v487;
+		v489 = v243[v244];
+		v245 = v489;
+		v246 = v488;
+		v247 = v479;
+		v248 = v483;
+		v249 = v484;
+		v490 = v245(v246, v247, v248, v249);
+		v491 = "Play";
+		v250 = v490;
+		v492 = v250;
+		v251 = v490;
+		v252 = v491;
+		v493 = v251[v252];
+		v253 = v493;
+		v254 = v492;
+		v253(v254);
+		v494 = "TweenService";
+		v255 = p3;
+		v256 = v494;
+		v495 = v255[v256];
+		v496 = "OpenRarity";
+		v257 = v308;
+		v258 = v496;
+		v497 = v257[v258];
+		v498 = "UIStroke";
+		v259 = v497;
+		v260 = v498;
+		v499 = v259[v260];
+		v500 = TweenInfo.new;
+		v501 = 0.3;
+		v261 = v501;
+		v262 = v307;
+		v502 = v261 * v262;
+		v263 = v500;
+		v264 = v502;
+		v503 = v263(v264);
+		v504 = {};
+		v505 = 0;
+		v506 = "Transparency";
+		v265 = v504;
+		v266 = v506;
+		v267 = v505;
+		v265[v266] = v267;
+		v507 = "Create";
+		v268 = v495;
+		v508 = v268;
+		v269 = v495;
+		v270 = v507;
+		v509 = v269[v270];
+		v271 = v509;
+		v272 = v508;
+		v273 = v499;
+		v274 = v503;
+		v275 = v504;
+		v510 = v271(v272, v273, v274, v275);
+		v511 = "Play";
+		v276 = v510;
+		v512 = v276;
+		v277 = v510;
+		v278 = v511;
+		v513 = v277[v278];
+		v279 = v513;
+		v280 = v512;
+		v279(v280);
+		v514 = wait;
+		v515 = 0.5;
+		v281 = v515;
+		v282 = v307;
+		v516 = v281 * v282;
+		v283 = v514;
+		v284 = v516;
+		v283(v284);
+		v517 = "Parent";
+		v285 = v308;
+		v286 = v517;
+		v518 = v285[v286];
+		v287 = v518;
+		if not v287 then
+			return;
+		else
+			v288 = p7;
+			if v288 then
+				v308.ShinyLabel.Text = "Shiny!";
+				p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+					TextTransparency = 0, 
+					TextStrokeTransparency = 0.3
+				}):Play();
+				wait(0.2 * v307);
+				p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+					Offset = Vector2.new(0.2, 0)
+				}):Play();
+				wait(0.2 * v307);
+			end;
+			v519 = "Parent";
+			v289 = v308;
+			v290 = v519;
+			v520 = v289[v290];
+			v291 = v520;
+			if not v291 then
+				return;
+			else
+				v521 = pairs;
+				v522 = "Stars";
+				v292 = v308;
+				v293 = v522;
+				v523 = v292[v293];
+				v524 = "GetChildren";
+				v294 = v523;
+				v525 = v294;
+				v295 = v523;
+				v296 = v524;
+				v526 = v295[v296];
+				v297 = v526;
+				v298 = v525;
+				v300 = v297(v298);
+				v299 = v521;
+				v527, v528, v529 = v299(v300);
+				while true do
+					if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+						if u5 <= p6 then
+							p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+						end;
+						v530.Visible = true;
+						p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+							ImageTransparency = 0
+						}):Play();
+						wait(0.6 * v307);
+						if not v308.Parent then
+							return;
+						end;
+					end;				
+				end;
+				v532 = u5;
+				v301 = v532;
+				v302 = p6;
+				if v301 <= v302 and not u3 then
+					wait(1 * v307);
+					if not v308.Parent then
+						return;
+					else
+						for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+							if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+								p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+									ImageTransparency = 1
+								}):Play();
+								p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+									TextTransparency = 1
+								}):Play();
+								p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+									Transparency = 1
+								}):Play();
+								p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+									TextTransparency = 1
+								}):Play();
+								p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+									TextTransparency = 1
+								}):Play();
+								p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+									Transparency = 1
+								}):Play();
+								p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+									TextTransparency = 1
+								}):Play();
+								for v535, v536 in pairs(v534.Stars:GetChildren()) do
+									if v536:IsA("ImageButton") then
+										p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+											ImageTransparency = 1
+										}):Play();
+									end;
+								end;
+								task.delay(0.3 * v307, function()
+									u3 = true;
+									wait(1);
+									if u9 then
+										u9:Disconnect();
+									end;
+									if v534 then
+										v534:Destroy();
+									end;
+								end);
+							end;
+						end;
+						return;
+					end;
+				else
+					return;
+				end;
+			end;
+		end;
+	end;
+	v421 = "OpenLabel";
+	v156 = v308;
+	v157 = v421;
+	v422 = v156[v157];
+	v423 = "Text";
+	v158 = v422;
+	v159 = v423;
+	v160 = p4;
+	v158[v159] = v160;
+	v424 = "OpenRarity";
+	v161 = v308;
+	v162 = v424;
+	v425 = v161[v162];
+	v426 = u4;
+	v163 = v303;
+	v164 = p4;
+	v427 = v163[v164];
+	v428 = "Rarity";
+	v165 = v427;
+	v166 = v428;
+	v429 = v165[v166];
+	v167 = v426;
+	v168 = v429;
+	v430 = v167[v168];
+	v431 = "TextColor3";
+	v169 = v425;
+	v170 = v431;
+	v171 = v430;
+	v169[v170] = v171;
+	v432 = "OpenRarity";
+	v172 = v308;
+	v173 = v432;
+	v433 = v172[v173];
+	v174 = v303;
+	v175 = p4;
+	v434 = v174[v175];
+	v435 = "Rarity";
+	v176 = v434;
+	v177 = v435;
+	v436 = v176[v177];
+	v437 = "Text";
+	v178 = v433;
+	v179 = v437;
+	v180 = v436;
+	v178[v179] = v180;
+	v438 = "TweenService";
+	v181 = p3;
+	v182 = v438;
+	v439 = v181[v182];
+	v440 = "OpenLabel";
+	v183 = v308;
+	v184 = v440;
+	v441 = v183[v184];
+	v442 = TweenInfo.new;
+	v443 = 0.3;
+	v185 = v443;
+	v186 = v307;
+	v444 = v185 * v186;
+	v187 = v442;
+	v188 = v444;
+	v445 = v187(v188);
+	v446 = {};
+	v447 = 0;
+	v448 = "TextTransparency";
+	v189 = v446;
+	v190 = v448;
+	v191 = v447;
+	v189[v190] = v191;
+	v449 = "Create";
+	v192 = v439;
+	v450 = v192;
+	v193 = v439;
+	v194 = v449;
+	v451 = v193[v194];
+	v195 = v451;
+	v196 = v450;
+	v197 = v441;
+	v198 = v445;
+	v199 = v446;
+	v452 = v195(v196, v197, v198, v199);
+	v453 = "Play";
+	v200 = v452;
+	v454 = v200;
+	v201 = v452;
+	v202 = v453;
+	v455 = v201[v202];
+	v203 = v455;
+	v204 = v454;
+	v203(v204);
+	v456 = "TweenService";
+	v205 = p3;
+	v206 = v456;
+	v457 = v205[v206];
+	v458 = "OpenLabel";
+	v207 = v308;
+	v208 = v458;
+	v459 = v207[v208];
+	v460 = "UIStroke";
+	v209 = v459;
+	v210 = v460;
+	v461 = v209[v210];
+	v462 = TweenInfo.new;
+	v463 = 0.3;
+	v211 = v463;
+	v212 = v307;
+	v464 = v211 * v212;
+	v213 = v462;
+	v214 = v464;
+	v465 = v213(v214);
+	v466 = {};
+	v467 = 0;
+	v468 = "Transparency";
+	v215 = v466;
+	v216 = v468;
+	v217 = v467;
+	v215[v216] = v217;
+	v469 = "Create";
+	v218 = v457;
+	v470 = v218;
+	v219 = v457;
+	v220 = v469;
+	v471 = v219[v220];
+	v221 = v471;
+	v222 = v470;
+	v223 = v461;
+	v224 = v465;
+	v225 = v466;
+	v472 = v221(v222, v223, v224, v225);
+	v473 = "Play";
+	v226 = v472;
+	v474 = v226;
+	v227 = v472;
+	v228 = v473;
+	v475 = v227[v228];
+	v229 = v475;
+	v230 = v474;
+	v229(v230);
+	v476 = "TweenService";
+	v231 = p3;
+	v232 = v476;
+	v477 = v231[v232];
+	v478 = "OpenRarity";
+	v233 = v308;
+	v234 = v478;
+	v479 = v233[v234];
+	v480 = TweenInfo.new;
+	v481 = 0.3;
+	v235 = v481;
+	v236 = v307;
+	v482 = v235 * v236;
+	v237 = v480;
+	v238 = v482;
+	v483 = v237(v238);
+	v484 = {};
+	v485 = 0;
+	v486 = "TextTransparency";
+	v239 = v484;
+	v240 = v486;
+	v241 = v485;
+	v239[v240] = v241;
+	v487 = "Create";
+	v242 = v477;
+	v488 = v242;
+	v243 = v477;
+	v244 = v487;
+	v489 = v243[v244];
+	v245 = v489;
+	v246 = v488;
+	v247 = v479;
+	v248 = v483;
+	v249 = v484;
+	v490 = v245(v246, v247, v248, v249);
+	v491 = "Play";
+	v250 = v490;
+	v492 = v250;
+	v251 = v490;
+	v252 = v491;
+	v493 = v251[v252];
+	v253 = v493;
+	v254 = v492;
+	v253(v254);
+	v494 = "TweenService";
+	v255 = p3;
+	v256 = v494;
+	v495 = v255[v256];
+	v496 = "OpenRarity";
+	v257 = v308;
+	v258 = v496;
+	v497 = v257[v258];
+	v498 = "UIStroke";
+	v259 = v497;
+	v260 = v498;
+	v499 = v259[v260];
+	v500 = TweenInfo.new;
+	v501 = 0.3;
+	v261 = v501;
+	v262 = v307;
+	v502 = v261 * v262;
+	v263 = v500;
+	v264 = v502;
+	v503 = v263(v264);
+	v504 = {};
+	v505 = 0;
+	v506 = "Transparency";
+	v265 = v504;
+	v266 = v506;
+	v267 = v505;
+	v265[v266] = v267;
+	v507 = "Create";
+	v268 = v495;
+	v508 = v268;
+	v269 = v495;
+	v270 = v507;
+	v509 = v269[v270];
+	v271 = v509;
+	v272 = v508;
+	v273 = v499;
+	v274 = v503;
+	v275 = v504;
+	v510 = v271(v272, v273, v274, v275);
+	v511 = "Play";
+	v276 = v510;
+	v512 = v276;
+	v277 = v510;
+	v278 = v511;
+	v513 = v277[v278];
+	v279 = v513;
+	v280 = v512;
+	v279(v280);
+	v514 = wait;
+	v515 = 0.5;
+	v281 = v515;
+	v282 = v307;
+	v516 = v281 * v282;
+	v283 = v514;
+	v284 = v516;
+	v283(v284);
+	v517 = "Parent";
+	v285 = v308;
+	v286 = v517;
+	v518 = v285[v286];
+	v287 = v518;
+	if not v287 then
+		return;
+	else
+		v288 = p7;
+		if v288 then
+			v308.ShinyLabel.Text = "Shiny!";
+			p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+				TextTransparency = 0, 
+				TextStrokeTransparency = 0.3
+			}):Play();
+			wait(0.2 * v307);
+			p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				Offset = Vector2.new(0.2, 0)
+			}):Play();
+			wait(0.2 * v307);
+		end;
+		v519 = "Parent";
+		v289 = v308;
+		v290 = v519;
+		v520 = v289[v290];
+		v291 = v520;
+		if not v291 then
+			return;
+		else
+			v521 = pairs;
+			v522 = "Stars";
+			v292 = v308;
+			v293 = v522;
+			v523 = v292[v293];
+			v524 = "GetChildren";
+			v294 = v523;
+			v525 = v294;
+			v295 = v523;
+			v296 = v524;
+			v526 = v295[v296];
+			v297 = v526;
+			v298 = v525;
+			v300 = v297(v298);
+			v299 = v521;
+			v527, v528, v529 = v299(v300);
+			while true do
+				if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+					if u5 <= p6 then
+						p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+					end;
+					v530.Visible = true;
+					p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+						ImageTransparency = 0
+					}):Play();
+					wait(0.6 * v307);
+					if not v308.Parent then
+						return;
+					end;
+				end;			
+			end;
+			v532 = u5;
+			v301 = v532;
+			v302 = p6;
+			if v301 <= v302 and not u3 then
+				wait(1 * v307);
+				if not v308.Parent then
+					return;
+				else
+					for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+						if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+							p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+								ImageTransparency = 1
+							}):Play();
+							p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+								TextTransparency = 1
+							}):Play();
+							p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+								Transparency = 1
+							}):Play();
+							p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+								TextTransparency = 1
+							}):Play();
+							p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+								TextTransparency = 1
+							}):Play();
+							p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+								Transparency = 1
+							}):Play();
+							p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+								TextTransparency = 1
+							}):Play();
+							for v535, v536 in pairs(v534.Stars:GetChildren()) do
+								if v536:IsA("ImageButton") then
+									p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+										ImageTransparency = 1
+									}):Play();
+								end;
+							end;
+							task.delay(0.3 * v307, function()
+								u3 = true;
+								wait(1);
+								if u9 then
+									u9:Disconnect();
+								end;
+								if v534 then
+									v534:Destroy();
+								end;
+							end);
+						end;
+					end;
+					return;
+				end;
+			else
+				return;
+			end;
+		end;
+	end;
+	v288 = p7;
+	if v288 then
+		v308.ShinyLabel.Text = "Shiny!";
+		p3.TweenService:Create(v308.ShinyLabel, TweenInfo.new(0.3 * v307), {
+			TextTransparency = 0, 
+			TextStrokeTransparency = 0.3
+		}):Play();
+		wait(0.2 * v307);
+		p3.TweenService:Create(v308.ShinyLabel.UIGradient, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Offset = Vector2.new(0.2, 0)
+		}):Play();
+		wait(0.2 * v307);
+	end;
+	v519 = "Parent";
+	v289 = v308;
+	v290 = v519;
+	v520 = v289[v290];
+	v291 = v520;
+	if not v291 then
+		return;
+	else
+		v521 = pairs;
+		v522 = "Stars";
+		v292 = v308;
+		v293 = v522;
+		v523 = v292[v293];
+		v524 = "GetChildren";
+		v294 = v523;
+		v525 = v294;
+		v295 = v523;
+		v296 = v524;
+		v526 = v295[v296];
+		v297 = v526;
+		v298 = v525;
+		v300 = v297(v298);
+		v299 = v521;
+		v527, v528, v529 = v299(v300);
+		while true do
+			if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+				if u5 <= p6 then
+					p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+				end;
+				v530.Visible = true;
+				p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+					ImageTransparency = 0
+				}):Play();
+				wait(0.6 * v307);
+				if not v308.Parent then
+					return;
+				end;
+			end;		
+		end;
+		v532 = u5;
+		v301 = v532;
+		v302 = p6;
+		if v301 <= v302 and not u3 then
+			wait(1 * v307);
+			if not v308.Parent then
+				return;
+			else
+				for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+					if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+						p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+							ImageTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+							Transparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+							Transparency = 1
+						}):Play();
+						p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						for v535, v536 in pairs(v534.Stars:GetChildren()) do
+							if v536:IsA("ImageButton") then
+								p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+									ImageTransparency = 1
+								}):Play();
+							end;
+						end;
+						task.delay(0.3 * v307, function()
+							u3 = true;
+							wait(1);
+							if u9 then
+								u9:Disconnect();
+							end;
+							if v534 then
+								v534:Destroy();
+							end;
+						end);
+					end;
+				end;
+				return;
+			end;
+		else
+			return;
+		end;
+	end;
+	v521 = pairs;
+	v522 = "Stars";
+	v292 = v308;
+	v293 = v522;
+	v523 = v292[v293];
+	v524 = "GetChildren";
+	v294 = v523;
+	v525 = v294;
+	v295 = v523;
+	v296 = v524;
+	v526 = v295[v296];
+	v297 = v526;
+	v298 = v525;
+	v300 = v297(v298);
+	v299 = v521;
+	for v531, v530 in v299(v300) do
+		if v530:IsA("ImageButton") and tonumber(v530.Name) <= p6 then
+			if u5 <= p6 then
+				p3.Sound.PlayLocalSound(p3.Sounds.Effects.StarDing, 1 + v531 / 10);
+			end;
+			v530.Visible = true;
+			p3.TweenService:Create(v530, TweenInfo.new(0.5 * v307, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+				ImageTransparency = 0
+			}):Play();
+			wait(0.6 * v307);
+			if not v308.Parent then
+				return;
+			end;
+		end;
+	end;
+	v532 = u5;
+	v301 = v532;
+	v302 = p6;
+	if v301 <= v302 then
+		if not u3 then
+			wait(1 * v307);
+			if not v308.Parent then
+				return;
+			else
+				for v533, v534 in pairs(p3.MainGui.CapsuleOpening:GetChildren()) do
+					if v534.Name ~= "Template" and not string.match(v534.Name, "Particles") and v534:IsA("Frame") then
+						p3.TweenService:Create(v534.ViewportFrame, TweenInfo.new(0.3 * v307), {
+							ImageTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenLabel, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenLabel.UIStroke, TweenInfo.new(0.3 * v307), {
+							Transparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.ShinyLabel, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenRarity, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						p3.TweenService:Create(v534.OpenRarity.UIStroke, TweenInfo.new(0.3 * v307), {
+							Transparency = 1
+						}):Play();
+						p3.TweenService:Create(v308.BossLabel, TweenInfo.new(0.3 * v307), {
+							TextTransparency = 1
+						}):Play();
+						for v535, v536 in pairs(v534.Stars:GetChildren()) do
+							if v536:IsA("ImageButton") then
+								p3.TweenService:Create(v536, TweenInfo.new(0.3 * v307), {
+									ImageTransparency = 1
+								}):Play();
+							end;
+						end;
+						task.delay(0.3 * v307, function()
+							u3 = true;
+							wait(1);
+							if u9 then
+								u9:Disconnect();
+							end;
+							if v534 then
+								v534:Destroy();
+							end;
+						end);
+					end;
+				end;
+				return;
+			end;
+		else
+			return;
+		end;
+	end;
+end;
+local u11 = false;
+local u12 = { "Common", "Uncommon", "Rare", "Legendary", "Mythical", "Event Exclusive", "Limited", "Secret" };
+local function u13(p12, p13)
+	local v537 = require(p12.Modules.PetStats);
+	local l__Egg__538 = p12.MainGui.Egg;
+	for v539, v540 in pairs((u1(require(p12.Modules.EggStats)[p13.Name].Pets))) do
+		local l__name__541 = v540.name;
+		local l__chance__542 = v540.chance;
+		local v543 = v537[l__name__541];
+		local v544 = l__Egg__538.Main.Pets:FindFirstChild(l__name__541);
+		if v544 and table.find(p12.Replica.Data.FoundPets, l__name__541) and v544.NameLabel.Text == "???" then
+			v544.ViewportFrame.ImageColor3 = Color3.fromRGB(255, 255, 255);
+			v544.NameLabel.Text = l__name__541;
+		end;
+	end;
+end;
+local function u14(p14, p15)
+	local v545 = script.InfoBar:Clone();
+	v545.Adornee = p15;
+	v545.Name = p15.Name;
+	v545.Parent = p14.BillboardGuis;
+	local v546 = require(p14.Modules.FormatNumber);
+	local v547 = p14.FormatNumber.NumberFormatter.with():Notation((p14.FormatNumber.Notation.compactWithSuffixThousands({ "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg" }))):Precision(p14.FormatNumber.Precision.maxFraction(2));
+	local v548 = require(p14.Modules.EggStats)[p15.Name];
+	v545.NameLabel.Text = p15.Name;
+	v545.Price.Text = v547:Format(v548.Price) .. " Clicks";
+	if table.find(p14.Replica.Data.Gamepasses, "VIP") then
+		v545.Price.Text = v547:Format(v548.Price * 9) .. " Clicks";
+	end;
+	if v548.Robux then
+		v545.Price.Text = "R$" .. v548.Price;
+	end;
+	if p14.BillboardGuis[p15.Name].Price.Text == "FREE!" then
+		v545.Price.Text = "FREE!";
+	end;
+	if v548.Shards then
+		v545.Price.Text = v547:Format(v548.Price) .. " Shards";
+		v545.Price.TextColor3 = Color3.fromRGB(165, 101, 255);
+	end;
+	if v548.Limited then
+		v545.LimitedLabel.Visible = true;
+		v545.Price.Text = "(" .. p15.Remaining.Value .. "/" .. p15.Max.Value .. ")";
+		v545.Price.TextColor3 = Color3.fromRGB(96, 255, 122);
+		v545.NameLabel.Text = string.gsub(p15.Name, "Companion", "");
+		if p15.Remaining.Value <= 0 then
+			v545.LimitedLabel.Text = "SOLD OUT!";
+			v545.Price.TextColor3 = Color3.fromRGB(227, 36, 36);
+		elseif p15.Remaining.Value <= v548.Amount / 10 then
+			v545.Price.TextColor3 = Color3.fromRGB(227, 36, 36);
+		elseif p15.Remaining.Value <= v548.Amount / 2 then
+			v545.Price.TextColor3 = Color3.fromRGB(227, 202, 8);
+		end;
+		p15.Remaining.Changed:Connect(function()
+			v545.Price.Text = "(" .. p15.Remaining.Value .. "/" .. p15.Max.Value .. ")";
+			if p15.Remaining.Value <= v548.Amount / 10 then
+				v545.Price.TextColor3 = Color3.fromRGB(227, 36, 36);
+			elseif p15.Remaining.Value <= v548.Amount / 2 then
+				v545.Price.TextColor3 = Color3.fromRGB(227, 202, 8);
+			end;
+			if p15.Remaining.Value <= 0 then
+				v545.Price.TextColor3 = Color3.fromRGB(227, 36, 36);
+				v545.LimitedLabel.Text = "SOLD OUT!";
+			end;
+		end);
+	end;
+	return v545;
+end;
+local function u15(p16, p17)
+	local v549 = require(p16.Modules.EggStats)[p17.Name];
+	local v550 = require(p16.Modules.PetStats);
+	local v551 = u1(v549.Pets);
+	local v552 = p16.FormatNumber.NumberFormatter.with():Notation((p16.FormatNumber.Notation.compactWithSuffixThousands({ "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg" }))):Precision(p16.FormatNumber.Precision.maxFraction(2));
+	local l__Egg__553 = p16.MainGui.Egg;
+	p16.Sound.PlayLocalSound(p16.Sounds.Effects.OpenEgg);
+	l__Egg__553.Top.ImageButton.TextLabel.Text = p17.Name;
+	if v549.Secret then
+		l__Egg__553.Top.PityLabel.Visible = true;
+	else
+		l__Egg__553.Top.PityLabel.Visible = false;
+	end;
+	local v554 = 0;
+	if p16.Replica.Data.EggOpens[p17.Name] then
+		v554 = p16.Replica.Data.EggOpens[p17.Name];
+	end;
+	l__Egg__553.Top.PityLabel.Text = "Secret Pity: [" .. v552:Format(v554) .. "/" .. v552:Format(20000) .. "]";
+	if v549.Limited then
+		l__Egg__553.Main.Pets.UIGridLayout.CellSize = UDim2.new(0.9, 0, 0.9, 0);
+		l__Egg__553.Main.Pets.UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center;
+		l__Egg__553.Price.Text = "LIMITED: " .. "(" .. p17.Remaining.Value .. "/" .. p17.Max.Value .. ") remaining";
+		if p17.Remaining.Value <= v549.Amount / 10 then
+			l__Egg__553.Price.TextColor3 = Color3.fromRGB(227, 36, 36);
+		elseif p17.Remaining.Value <= v549.Amount / 2 then
+			l__Egg__553.Price.TextColor3 = Color3.fromRGB(227, 202, 8);
+		else
+			l__Egg__553.Price.TextColor3 = Color3.fromRGB(96, 255, 122);
+		end;
+		if p17.Remaining.Value <= 0 then
+			l__Egg__553.Price.Text = "SOLD OUT!";
+		end;
+	elseif v549.Robux then
+		l__Egg__553.Price.Text = "R$" .. v552:Format(v549.Price);
+		l__Egg__553.Main.Pets.UIGridLayout.CellSize = UDim2.new(0.31, 0, 0.27, 0);
+		l__Egg__553.Main.Pets.UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Left;
+		l__Egg__553.Price.TextColor3 = Color3.new(1, 0.878431, 0.192157);
+	else
+		l__Egg__553.Main.Pets.UIGridLayout.CellSize = UDim2.new(0.31, 0, 0.27, 0);
+		l__Egg__553.Main.Pets.UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Left;
+		l__Egg__553.Price.TextColor3 = Color3.new(1, 1, 1);
+		l__Egg__553.Price.Text = v552:Format(v549.Price) .. " Clicks";
+	end;
+	if v549.Shards then
+		l__Egg__553.Price.Text = v552:Format(v549.Price) .. " Shards";
+		l__Egg__553.Price.TextColor3 = Color3.new(0.717647, 0.396078, 1);
+	end;
+	local l__Gamepasses__555 = p16.Replica.Data.Gamepasses;
+	local v556 = p16.Replica.Data.Boosts["2xLuck"];
+	local v557 = false;
+	if v556 and v556 > 0 then
+		v557 = true;
+	end;
+	local v558 = false;
+	if table.find(l__Gamepasses__555, "Lucky") or table.find(l__Gamepasses__555, "Super Lucky") then
+		v558 = true;
+	end;
+	if v558 or v557 then
+		if table.find(l__Gamepasses__555, "Super Lucky") then
+
+		end;
+		if table.find(l__Gamepasses__555, "Super Lucky") and table.find(l__Gamepasses__555, "Lucky") then
+
+		end;
+		local v559 = false;
+		if table.find(l__Gamepasses__555, "Lucky") or table.find(l__Gamepasses__555, "Super Lucky") then
+			v559 = true;
+		end;
+		if v559 or v557 then
+			if table.find(l__Gamepasses__555, "Super Lucky") then
+
+			end;
+			if table.find(l__Gamepasses__555, "Super Lucky") and table.find(l__Gamepasses__555, "Lucky") then
+
+			end;
+			local v560 = 0;
+			local v561 = v551[1];
+			v561.chance = v561.chance - (#v551 - 1) * 3;
+			for v562, v563 in pairs(v551) do
+				if v562 ~= 1 then
+					v560 = v560 + 3;
+					v563.chance = v563.chance + 3;
+				end;
+			end;
+		end;
+	end;
+	local v564 = {};
+	for v565, v566 in pairs(l__Egg__553.Main.Pets:GetChildren()) do
+		if not v566:IsA("UIGridLayout") then
+			v566:Destroy();
+		end;
+	end;
+	local v567, v568, v569 = pairs(v551);
+	while true do
+		local v570, v571 = v567(v568, v569);
+		if not v570 then
+			break;
+		end;
+		local l__name__572 = v571.name;
+		local v573 = v550[l__name__572];
+		if not v573 then
+			print(l__name__572);
+		end;
+		local v574 = l__Egg__553.Main.Template:Clone();
+		v574.Visible = true;
+		v574.NameLabel.Text = l__name__572;
+		v574.ChanceLabel.Text = v571.chance .. "%";
+		v574.Name = l__name__572;
+		local v575 = l__Egg__553.Main[v573.Rarity .. "Gradient"]:Clone();
+		v575.Enabled = true;
+		v575.Parent = v574;
+		local v576 = p16.Assets.Pets[l__name__572]:Clone();
+		v576.Parent = v574.ViewportFrame;
+		if not v576.PrimaryPart then
+			print(v576);
+		end;
+		v576:SetPrimaryPartCFrame(CFrame.new(0, 0, 0) * CFrame.Angles(0, math.pi, 0));
+		local v577 = Instance.new("Camera");
+		v577.Parent = v574.ViewportFrame;
+		v574.ViewportFrame.CurrentCamera = v577;
+		v577.CFrame = CFrame.new(0, 0, 3.3);
+		v577.CFrame = CFrame.new(v577.CFrame.Position, Vector3.new(0, 0, 0));
+		table.insert(v564, v574);
+		if v549.Limited then
+			v574.ChanceLabel.Visible = false;
+		end;
+		local v578 = false;
+		if table.find(p16.Replica.Data.FoundPets, l__name__572) then
+			v578 = true;
+		end;
+		if not v578 and not v549.Limited then
+			v574.ViewportFrame.ImageColor3 = Color3.fromRGB(10, 10, 10);
+			v574.NameLabel.Text = "???";
+		end;
+		v574.Parent = l__Egg__553.Main.Pets;	
+	end;
+	table.sort(v564, function(p18, p19)
+		local v579 = 0;
+		local v580 = 0;
+		local v581, v582, v583 = pairs(v549.Pets);
+		while true do
+			local v584, v585 = v581(v582, v583);
+			if not v584 then
+				break;
+			end;
+			if v585.name == p18 then
+				v579 = v585.chance;
+			end;
+			if v585.name == p19 then
+				v580 = v585.chance;
+			end;		
+		end;
+		return v580 < v579;
+	end);
+	return l__Egg__553;
+end;
+return function(p20)
+	local v586 = require(p20.Modules.PetStats);
+	local v587 = require(p20.Modules.EggStats);
+	local v588 = require(p20.Modules.FormatNumber);
+	local v589 = require(p20.Modules.ButtonAnimate);
+	local v590 = require(p20.Modules.SoundModule);
+	local v591 = nil;
+	local u16 = require(p20.Modules.Blur);
+	local l__Egg__17 = p20.MainGui.Egg;
+	local u18 = require(p20.Modules.FrameModule);
+	local u19 = nil;
+	p20.Remotes.RobuxEggOpened.OnClientEvent:Connect(function(p21)
+		wait(2.5);
+		u16.ToggleBlur(true);
+		l__Egg__17:TweenPosition(UDim2.new(0.5, 0, -0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.2, true);
+		u6(false);
+		u18.HideHUD();
+		u5 = p21.star;
+		u7(p20, p21.name, 1, p21.star, p21.shiny);
+		u16.ToggleBlur(false);
+		if u19 then
+			l__Egg__17:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+		end;
+		u6(true);
+		u18.ShowHUD();
+	end);
+	p20.Remotes.BossEggOpened.OnClientEvent:Connect(function(p22)
+		wait(2.5);
+		u16.ToggleBlur(true);
+		l__Egg__17:TweenPosition(UDim2.new(0.5, 0, -0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.2, true);
+		u6(false);
+		u18.HideHUD();
+		u5 = p22 and p22.star or 1;
+		u7(p20, p22.name, 1, p22.star, p22.shiny, true);
+		u16.ToggleBlur(false);
+		if u19 then
+			l__Egg__17:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+		end;
+		u6(true);
+		u18.ShowHUD();
+	end);
+	l__Egg__17.Parent.CapsuleOpening.Close.Activated:Connect(function()
+		l__Egg__17.Parent.CapsuleOpening.Close.Visible = false;
+		u11 = false;
+		local v592 = tick();
+		while true do
+			wait();
+			if u3 then
+				break;
+			end;
+			if tick() - v592 > 10 then
+				break;
+			end;		
+		end;
+		u11 = false;
+		u16.ToggleBlur(false);
+		if u19 then
+			l__Egg__17:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+		end;
+		u6(true);
+		u18.ShowHUD();
+	end);
+	local u20 = true;
+	local u21 = true;
+	local function u22(p23, p24, p25, p26)
+		if not p25 then
+			return;
+		end;
+		local u23 = p23;
+		local v593, v594 = pcall(function()
+			if not u20 then
+				u11 = false;
+				p20.MainGui.CapsuleOpening.Close.Visible = false;
+				return;
+			end;
+			if v587[p25.Name].Boss then
+				return;
+			end;
+			p25.Star.Attachment.Sparkles:Emit(60);
+			if p24 and not table.find(p20.Replica.Data.Gamepasses, "Auto Open") then
+				p20.Remotes.RobuxPurchase:FireServer("Auto Open");
+				u18.HideHUD();
+				u16.ToggleBlur(true);
+				l__Egg__17:TweenPosition(UDim2.new(0.5, 0, -0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.2, true);
+				p20.MainGui.LoadingCircle.Visible = true;
+				return;
+			end;
+			if u23 and not table.find(p20.Replica.Data.Gamepasses, "Triple Open") then
+				u18.HideHUD();
+				u16.ToggleBlur(true);
+				p20.MainGui.LoadingCircle.Visible = true;
+				l__Egg__17:TweenPosition(UDim2.new(0.5, 0, -0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.2, true);
+			end;
+			if p24 and not u23 and table.find(p20.Replica.Data.Gamepasses, "Triple Open") then
+				u23 = true;
+			end;
+			local v595 = 50;
+			if table.find(p20.Replica.Data.Gamepasses, "Companion Storage") then
+				v595 = v595 + 100;
+			end;
+			if table.find(p20.Replica.Data.Gamepasses, "Super Companion Storage") then
+				v595 = v595 + 250;
+			end;
+			local v596 = require(game.ReplicatedStorage.Library.Modules.Upgrades);
+			if p20.Replica.Data.Upgrades["More Storage"] then
+				local v597 = v595 + v596["More Storage"][p20.Replica.Data.Upgrades["More Storage"]].Value;
+			end;
+			local v598 = 0;
+			for v599, v600 in pairs(p20.Replica.Data.Pets) do
+				v598 = v598 + 1;
+			end;
+			if v587[p25.Name].Limited then
+				u18.HideHUD();
+				u16.ToggleBlur(true);
+				p20.MainGui.LoadingCircle.Visible = true;
+				l__Egg__17:TweenPosition(UDim2.new(0.5, 0, -0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.2, true);
+			end;
+			u21 = false;
+			u20 = false;
+			local v601 = p20.Remotes.OpenEgg:InvokeServer(p25.Name, u23, p24);
+			if v601 == "broke" then
+				u20 = true;
+				u21 = true;
+				if not (not u11) and not (not p20.Replica.Data.Settings.AutoClick) or p20.Replica.Data.Settings.SlowAutoClick then
+					local v602 = u23 and v587[p25.Name].Price * 3 or v587[p25.Name].Price;
+					while true do
+						wait();
+						if not u11 then
+							break;
+						end;
+						if v602 <= p20.Replica.Data.Clicks then
+							break;
+						end;					
+					end;
+				else
+					p20.Notify.NotifyUpper(2, "Not enough Clicks!");
+					l__Egg__17.Parent.CapsuleOpening.Close.Visible = false;
+					u11 = false;
+				end;
+			elseif v601 == "max storage" then
+				u11 = false;
+				l__Egg__17.Parent.CapsuleOpening.Close.Visible = false;
+				u20 = true;
+				u21 = true;
+				u16.ToggleBlur(false);
+				if u19 then
+					l__Egg__17:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+				end;
+				u6(true);
+				u18.ShowHUD();
+			elseif v601 == "no gamepass" then
+				u11 = false;
+				l__Egg__17.Parent.CapsuleOpening.Close.Visible = false;
+				u20 = true;
+				u21 = true;
+			else
+				if v601 == "robuxprompted" then
+					u20 = true;
+					u21 = true;
+					return;
+				end;
+				if v601 == "soldout" then
+					u18.ShowHUD();
+					u16.ToggleBlur(false);
+					p20.MainGui.LoadingCircle.Visible = false;
+					p20.Notify.NotifyUpper(2, "Sold out!");
+					u20 = true;
+					u21 = true;
+					return;
+				end;
+				if v601 then
+					if p24 then
+						u11 = true;
+						l__Egg__17.Parent.CapsuleOpening.Close.Visible = true;
+					else
+						p20.Sound.PlayLocalSound(p20.Sounds.Effects.RobuxPurchase);
+					end;
+					local v603 = false;
+					if v587[p25.Name].Price == 0 then
+						v603 = true;
+						p20.Remotes.TutorialEvent:Fire("opened free");
+					end;
+					u16.ToggleBlur(true);
+					l__Egg__17:TweenPosition(UDim2.new(0.5, 0, -0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.2, true);
+					u6(false);
+					u18.HideHUD();
+					if u23 then
+						u5 = 1;
+						local v604 = 1;
+						local v605 = v601[1];
+						for v606, v607 in pairs(v601) do
+							if u5 < v607.star then
+								u5 = v607.star;
+							end;
+						end;
+						for v608, v609 in pairs(v601) do
+							if v604 < table.find(u12, v586[v609.name].Rarity) then
+								v604 = table.find(u12, v586[v609.name].Rarity);
+								v605 = v609;
+							elseif v609.name == v605.name and v605.star < v609.star then
+								v605 = v609;
+							end;
+						end;
+						task.spawn(function()
+							u7(p20, v605.name, 1, v605.star, v605.shiny);
+						end);
+						local v610 = 1;
+						for v611, v612 in pairs(v601) do
+							if v612 ~= v605 then
+								v610 = v610 + 1;
+								if v610 == 2 then
+									task.spawn(function()
+										u7(p20, v612.name, v610, v612.star, v612.shiny);
+									end);
+								else
+									u7(p20, v612.name, v610, v612.star, v612.shiny);
+								end;
+							end;
+						end;
+					else
+						u5 = v601.star;
+						u7(p20, v601.name, 1, v601.star, v601.shiny);
+					end;
+					local v613 = tick();
+					while true do
+						wait();
+						if u3 then
+							break;
+						end;
+						if tick() - v613 > 10 then
+							break;
+						end;					
+					end;
+					u21 = true;
+					if v603 then
+						p20.Remotes.TutorialEvent:Fire("finished");
+					end;
+					local v614 = require(p20.Modules.PetStats);
+					for v615, v616 in pairs(require(p20.Modules.EggStats)[p25.Name].Pets) do
+						local l__name__617 = v616.name;
+					end;
+				else
+					local v618 = false;
+					if p25 ~= nil then
+						v618 = p25.Name;
+					end;
+					warn("Status returned as nil from " .. v618);
+					if u11 then
+						wait(3);
+					end;
+				end;
+			end;
+			u20 = true;
+			u21 = true;
+			u13(p20, p25);
+			if u11 then
+				u22(false, true, p25, p26);
+				return;
+			end;
+			u16.ToggleBlur(false);
+			if u19 then
+				l__Egg__17:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+			end;
+			u6(true);
+			u18.ShowHUD();
+		end);
+		if not v593 then
+			warn("Error while opening egg: " .. v594);
+		end;
+	end;
+	local u24 = p20.FormatNumber.NumberFormatter.with():Notation((p20.FormatNumber.Notation.compactWithSuffixThousands({ "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg" }))):Precision(p20.FormatNumber.Precision.maxFraction(2));
+	p20.Replica:ListenToChange({ "EggOpens" }, function(p27)
+		if u19 and u19.Parent and u19.Parent.Parent then
+			local l__Name__619 = u19.Parent.Parent.Name;
+			local v620 = 0;
+			if p27[l__Name__619] then
+				v620 = p27[l__Name__619];
+			end;
+			l__Egg__17.Top.PityLabel.Text = "Secret Pity: [" .. u24:Format(v620) .. "/" .. u24:Format(20000) .. "]";
+		end;
+	end);
+	if p20.UserInputService.TouchEnabled and not p20.UserInputService.KeyboardEnabled and not p20.UserInputService.MouseEnabled and not p20.UserInputService.GamepadEnabled and not p20.GuiService:IsTenFootInterface() then
+		l__Egg__17.Buttons.ButtonE.TextLabel.Text = "TAP";
+		l__Egg__17.Buttons.ButtonQ.TextLabel.Text = "TAP";
+		l__Egg__17.Buttons.ButtonR.TextLabel.Text = "TAP";
+	elseif p20.GuiService:IsTenFootInterface() or p20.UserInputService.GamepadEnabled then
+		l__Egg__17.Buttons.ButtonE.TextLabel.Text = "Y";
+		l__Egg__17.Buttons.ButtonQ.TextLabel.Text = "L1";
+		l__Egg__17.Buttons.ButtonR.TextLabel.Text = "R2";
+	end;
+	v589.SetupPopButton(l__Egg__17.Buttons.ButtonE);
+	v589.SetupPopButton(l__Egg__17.Buttons.ButtonQ);
+	v589.SetupPopButton(l__Egg__17.Buttons.ButtonR);
+	for v621, v622 in pairs(workspace.Eggs:GetChildren()) do
+		u14(p20, v622);
+		local v623 = Instance.new("ProximityPrompt");
+		v623.Exclusivity = Enum.ProximityPromptExclusivity.OnePerButton;
+		v623.GamepadKeyCode = Enum.KeyCode.ButtonY;
+		v623.RequiresLineOfSight = false;
+		v623.Style = Enum.ProximityPromptStyle.Custom;
+		v623.Parent = v622.Star;
+		local v624 = Instance.new("ProximityPrompt");
+		v624.Exclusivity = Enum.ProximityPromptExclusivity.OnePerButton;
+		v624.GamepadKeyCode = Enum.KeyCode.ButtonL1;
+		v624.KeyboardKeyCode = Enum.KeyCode.Q;
+		v624.RequiresLineOfSight = false;
+		v624.Style = Enum.ProximityPromptStyle.Custom;
+		v624.Parent = v622.Star;
+		local v625 = Instance.new("ProximityPrompt");
+		v625.Exclusivity = Enum.ProximityPromptExclusivity.OnePerButton;
+		v625.GamepadKeyCode = Enum.KeyCode.ButtonR2;
+		v625.KeyboardKeyCode = Enum.KeyCode.R;
+		v625.RequiresLineOfSight = false;
+		v625.Style = Enum.ProximityPromptStyle.Custom;
+		v625.Parent = v622.Star;
+		local u25 = v591;
+		local l__Egg__26 = p20.MainGui.Egg;
+		local u27 = nil;
+		local u28 = nil;
+		local u29 = nil;
+		v623.PromptShown:Connect(function()
+			if v622:FindFirstChild("CanOpen") and not v622.CanOpen.Value then
+				return;
+			end;
+			u25 = v623;
+			u15(p20, v622);
+			l__Egg__26:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+			p20.BillboardGuis[v622.Name].Enabled = false;
+			u27 = l__Egg__26.Buttons.ButtonE.Activated:Connect(function()
+				u19 = v623;
+				u22(false, false, v622);
+			end);
+			u28 = l__Egg__26.Buttons.ButtonR.Activated:Connect(function()
+				u19 = v623;
+				u22(true, false, v622);
+			end);
+			u29 = l__Egg__26.Buttons.ButtonQ.Activated:Connect(function()
+				u19 = v623;
+				u22(false, true, v622);
+			end);
+		end);
+		v623.PromptHidden:Connect(function()
+			u11 = false;
+			u19 = nil;
+			l__Egg__26:TweenPosition(UDim2.new(0.5, 0, -0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.2, true);
+			p20.MainGui.CapsuleOpening.Close.Visible = false;
+			if u25 == v623 then
+				if u28 then
+					u28:Disconnect();
+				end;
+				if u27 then
+					u27:Disconnect();
+				end;
+				if u29 then
+					u29:Disconnect();
+				end;
+			end;
+			wait(0.4);
+			if u25 == v623 then
+				p20.BillboardGuis[v622.Name].Enabled = true;
+				u21 = true;
+				u11 = false;
+				p20.MainGui.CapsuleOpening.Close.Visible = false;
+			end;
+		end);
+		v623.Triggered:Connect(function()
+			if v622:FindFirstChild("CanOpen") and not v622.CanOpen.Value then
+				return;
+			end;
+			u19 = v623;
+			u22(false, false, v622);
+		end);
+		v625.Triggered:Connect(function()
+			if v622:FindFirstChild("CanOpen") and not v622.CanOpen.Value then
+				return;
+			end;
+			u19 = v625;
+			u22(true, false, v622);
+		end);
+		v624.Triggered:Connect(function()
+			if v622:FindFirstChild("CanOpen") and not v622.CanOpen.Value then
+				return;
+			end;
+			u19 = v625;
+			u22(false, true, v622);
+		end);
+	end;
+	game:GetService("MarketplaceService").PromptGamePassPurchaseFinished:Connect(function()
+		if u19 then
+			l__Egg__17:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+		end;
+	end);
+	game:GetService("MarketplaceService").PromptProductPurchaseFinished:Connect(function()
+		if u19 then
+			l__Egg__17:TweenPosition(UDim2.new(0.5, 0, 0.238, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.35, true);
+		end;
+	end);
+	local u30 = false;
+	l__Egg__17.ToggleAutoDelete.Activated:Connect(function()
+		u30 = not u30;
+		if u30 then
+			l__Egg__17.ToggleAutoDelete.Text = ">";
+			l__Egg__17.ToggleAutoDelete.TextLabel.Visible = false;
+			l__Egg__17.AutoDelete:TweenPosition(UDim2.new(-0.119, 0, 0.642, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.3, true);
+			return;
+		end;
+		l__Egg__17.ToggleAutoDelete.Text = "<";
+		l__Egg__17.ToggleAutoDelete.TextLabel.Visible = true;
+		l__Egg__17.AutoDelete:TweenPosition(UDim2.new(0.5, 0, 0.642, 0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.2, true);
+	end);
+	p20.UserInputService.InputBegan:Connect(function(p28, p29)
+		if p29 then
+			return;
+		end;
+		if p28.UserInputType == Enum.UserInputType.Gamepad1 and p28.KeyCode == Enum.KeyCode.ButtonL2 then
+			u30 = not u30;
+			if not u30 then
+				l__Egg__17.ToggleAutoDelete.Text = "<";
+				l__Egg__17.ToggleAutoDelete.TextLabel.Visible = true;
+				l__Egg__17.AutoDelete:TweenPosition(UDim2.new(0.5, 0, 0.642, 0), Enum.EasingDirection.In, Enum.EasingStyle.Sine, 0.2, true);
+				return;
+			end;
+		else
+			return;
+		end;
+		l__Egg__17.ToggleAutoDelete.Text = ">";
+		l__Egg__17.ToggleAutoDelete.TextLabel.Visible = false;
+		l__Egg__17.AutoDelete:TweenPosition(UDim2.new(-0.119, 0, 0.642, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Back, 0.3, true);
+	end);
+	if p20.UserInputService.GamepadEnabled then
+		l__Egg__17.ToggleAutoDelete.L2.Visible = true;
+	end;
+	local u31 = false;
+	l__Egg__17.AutoDelete.AutoDelete.Activated:Connect(function()
+		u31 = not u31;
+		p20.Remotes.ChangeSettings:FireServer("AutoDelete", u31);
+		if u31 then
+			l__Egg__17.AutoDelete.AutoDelete.Image = l__Egg__17.AutoDelete.On.Image;
+			l__Egg__17.AutoDelete.AutoDelete.TextLabel.Text = "On";
+			return;
+		end;
+		l__Egg__17.AutoDelete.AutoDelete.Image = l__Egg__17.AutoDelete.Off.Image;
+		l__Egg__17.AutoDelete.AutoDelete.TextLabel.Text = "Off";
+	end);
+	l__Egg__17.AutoDelete.AutoDelete.ClipsDescendants = false;
+	p20.Remotes.ChangeSettings:FireServer("AutoDelete", false);
+	for v626, v627 in pairs(u4) do
+		if v626 ~= "Limited" and v626 ~= "Event Exclusive" and v626 ~= "Secret" then
+			local v628 = false;
+			local v629 = l__Egg__17.AutoDelete.Template:Clone();
+			v629.Name = v626;
+			v629.Visible = true;
+			v629.Box.TextLabel.Text = v626;
+			v629.TextLabel.Text = "Off";
+			v629.LayoutOrder = table.find(u12, v626);
+			v629.Parent = l__Egg__17.AutoDelete.Frame;
+			if p20.Replica.Data.Settings[v626 .. "AutoDelete"] ~= nil then
+				if p20.Replica.Data.Settings[v626 .. "AutoDelete"] then
+					v629.Image = l__Egg__17.AutoDelete.On.Image;
+					v629.TextLabel.Text = "On";
+					v628 = true;
+				else
+					v629.Image = l__Egg__17.AutoDelete.Off.Image;
+					v629.TextLabel.Text = "Off";
+				end;
+			end;
+			local u32 = v628;
+			v629.Activated:Connect(function()
+				u32 = not u32;
+				p20.Remotes.ChangeSettings:FireServer(v626 .. "AutoDelete", u32);
+				if not u32 then
+					v629.Image = l__Egg__17.AutoDelete.Off.Image;
+					v629.TextLabel.Text = "Off";
+					return;
+				end;
+				v629.Image = l__Egg__17.AutoDelete.On.Image;
+				v629.TextLabel.Text = "On";
+				u32 = true;
+			end);
+			v629.ClipsDescendants = false;
+		end;
+	end;
+end;

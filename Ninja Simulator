@@ -1,0 +1,47 @@
+getgenv().DNA = true;
+getgenv()Bats = true;
+
+
+local gamepassMod = require(game:GetService("ReplicatedStorage").Shared.List.Passes)
+
+gamepassMod.HasPass = function() return true end
+
+
+
+spawn(functions
+while DNA == true do 
+    local args = {
+        [1] = "DNA"
+    }
+    
+    game:GetService("ReplicatedStorage").Knit.Services.ShopService.RE.buyAll:FireServer(unpack(args))
+end
+)
+
+
+
+
+
+spawn(functions
+while Bats == true do
+    local args = {
+        [1] = "Bats"
+    }
+    
+    game:GetService("ReplicatedStorage").Knit.Services.ShopService.RE.buyAll:FireServer(unpack(args))
+end
+)
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("TITLE", "Synapse")
+local Tab = Window:NewTab("TabName")
+local Tab = Window:NewTab("TabName")
+
+Section:NewButton("ButtonText", "ButtonInfo", function()
+    print("Clicked")
+end)
+
+Section:NewToggle("ToggleText", "ToggleInfo", function(state)
+    
+end)

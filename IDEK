@@ -1,0 +1,204 @@
+getgenv().pog = false;
+getgenv().gun = false;
+getgenv().Other = false;
+getgenv().collect = false;
+
+
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("huwo") -- Creates the window
+
+local b = w:CreateFolder("Knife") -- Creates the folder(U will put here your buttons,etc)
+
+local c = w:CreateFolder("Guns")
+
+local d = w:CreateFolder("Others")
+
+local e = w:CreateFolder("Destroy")
+
+local f = w:CreateFolder("Farm UwU")
+
+e:DestroyGui()
+
+local knifeType;
+
+b:Dropdown("Knifes",{"Katana Case #2","Slicer Case","Saber Case","Voltage Case","Axe Case","Bat Case","Dragon Case","Fire Butterfly Chest","Gravity Case","Mega Case","Nightmare Case","Octupus Case","Overseer Case","Scythe Case","Steampunk Case","Void Case","Katana Case","Meme Case","Skeleton Case","Wrath Case","Roach Case","Bayonet Case","Dark Matter Case","Drink Case","Elemental Case","Godly Case","Golden Case","Karambit Case","Lava Blade Case","Starlight Case"},true,function(value) --true/false, replaces the current title "Dropdown" with the option that t
+    knifeType = value;
+    print(value)
+end)
+
+b:Toggle("Toggle",function(bool)
+    getgenv().pog = bool
+    print(Knife)
+    if bool then
+        knife(knifeType);
+    end
+end)
+--knife--
+function knife(knife)
+    while pog == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.KnifeSkins:FindFirstChild(knifeType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))  
+        wait(0.2)
+        end
+end
+
+function knife(knife)
+    while pog == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.KnifeSkins:FindFirstChild(knifeType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))  
+        wait(0.2)
+        end
+end
+
+function knife(knife)
+    while pog == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.KnifeSkins:FindFirstChild(knifeType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))  
+        wait(0.2)
+        end
+end
+local gunType;
+
+c:Dropdown("Gun",{"Shotgun Case","Drum Case","Shark Case","Ray Case","Deagle Case","Fury Case","Historic Case","Luger Case","Music Case","Rifle Crate","Seer Case","Void Case","Plunger Case","Icy Fury"},true,function(value) --true/false, replaces the current title "Dropdown" with the option that t
+    gunType = value;
+    print(value)
+end)
+
+c:Toggle("Toggle",function(bool)
+    getgenv().gun = bool
+    print(Guns)
+    if bool then 
+        guns(gunType);
+    end
+end)
+
+--gun--
+function guns(guns)
+    while gun == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.RevolverSkins:FindFirstChild(gunType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))
+        wait(0.4)
+        end
+end
+
+function guns(guns)
+    while gun == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.RevolverSkins:FindFirstChild(gunType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))
+        wait(0.4)
+        end
+end
+
+function guns(guns)
+    while gun == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.RevolverSkins:FindFirstChild(gunType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))
+        wait(0.4)
+        end
+end
+
+local OthersType;
+
+d:Dropdown("Others",{"Chroma Case #1","Chroma Case #2","Chromaline Case","Chromablade Chest","Chromaworld Chest","Chroma Case","Chroma Wing Chest","Chromaworld Chest"},true,function(value) --true/false, replaces the current title "Dropdown" with the option that t
+    OthersType = value;
+    print(value)
+end)
+
+d:Toggle("Toggle",function(bool)
+    getgenv().Other = bool
+    print(Others)
+    if bool then 
+        Others(OthersType)
+    end
+end)
+
+--other--
+function Others(Others)
+    while Other == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.Others:FindFirstChild(OthersType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))
+        wait(0.2)
+    end
+end
+
+function Others(Others)
+    while Other == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.Others:FindFirstChild(OthersType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))
+        wait(0.2)
+    end
+end
+
+function Others(Others)
+    while Other == true do 
+        local args = {
+            [1] = game:GetService("ReplicatedStorage").ShopEntries.Others:FindFirstChild(OthersType)
+        }
+        
+        game:GetService("ReplicatedStorage").Interactions.Server.BuyShopItem:InvokeServer(unpack(args))
+        wait(0.2)
+    end
+end
+
+f:Toggle("Toggle",function(bool)
+    getgenv().collect = bool;
+    print(COLLECTING_UwU, bool)
+    if bool then 
+        Farmer();
+    end
+end)
+
+function Farmer()
+    local playerHead = game.Players.LocalPlayer.Character.Head
+    spawn(function()
+        while wait() do
+            if not getgenv().collect then break end
+            for i, v in pairs(game:GetService("Workspace").CoinsFolder:GetDescendants()) do
+                if v.Name == "TouchInterest" and v.Parent then
+                    --We will fire the touch event
+                    firetouchinterest(playerHead, v.Parent, 0)
+                    wait(0.1)
+                    firetouchinterest(playerHead, v.Parent, 1)
+                    break;
+                end
+            end
+        end
+    end)
+end
+
+
+
+local monk = yup
+game:GetService("RunService").RenderStepped:connect(function()
+for i,v in pairs(game:GetService("Workspace").CoinsFolder:GetChildren()) do
+v.Position = game:GetService"Players".LocalPlayer.Character.HumanoidRootPart.Position
+break;
+end
+end)
+

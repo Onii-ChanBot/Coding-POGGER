@@ -1,0 +1,186 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Maxgat5/UiLib/main/lua')))()
+local w = library:CreateWindow("Flower Magnet Simulator")
+local b = w:CreateFolder("AutoFarm")
+local f = w:CreateFolder("AutoBuy")
+local e = w:CreateFolder("Mix")
+local u = w:CreateFolder("Credits")
+SelectedArea = "Spawn"
+Area = {}
+for i,v in pairs(game:GetService("Workspace")["Points_Collect"]:GetChildren()) do
+    if not table.find(Area,v.Name) then
+        table.insert(Area,v.Name)
+    end
+end
+SelectedEgg = "Basic Egg"
+Egg = {}
+for i,v in pairs(game:GetService("Workspace")["Eggs_Service"]:GetChildren()) do
+    if not table.find(Egg,v.Name) then
+        table.insert(Egg,v.Name)
+    end
+end
+
+b:Toggle("AutoTpFlowers",function(bool)
+    shared.toggle = bool
+    AutoTpFlowers = bool
+end)
+
+b:Dropdown("Select Area",Area,true,function(a)
+    SelectedArea = a
+end)
+
+b:Toggle("AutoSell",function(bool)
+    shared.toggle = bool
+    AutoSell = bool
+end)
+
+f:Dropdown("Select Egg",Egg,true,function(a)
+    SelectedEgg = a
+end)
+
+f:Toggle("Buy Egg",function(bool)
+    shared.toggle = bool
+    BuyEgg = bool
+end)
+
+f:Button("Show Price",function()
+    local CoreGui = game:GetService("StarterGui")
+    CoreGui:SetCore("SendNotification", {
+    	Title = "Maxgat5";
+    	Text = ""..SelectedEgg.." Costs: "..game:GetService("Workspace")["Eggs_Service"][SelectedEgg].Cost.Value.."";
+    	Duration = 5;
+    })
+end)
+
+f:Toggle("Rebirth",function(bool)
+    shared.toggle = bool
+    Rebirth = bool
+end)
+
+e:Toggle("AntiAfk",function(bool)
+    shared.toggle = bool
+    AntiAfk = bool
+end)
+
+e:Button("Open Shop",function()
+    pcall(function()
+            function ClosestPart()
+                local dist = math.huge
+                local target = nil
+                for i,v in pairs(game:GetService("Workspace").Map["1|MainMap"].Buildings:GetChildren()) do
+                    if v.ClassName == "Part" then
+                        for i,v1 in pairs(v.BillboardGui:GetChildren()) do
+                            if v1.Text == "SHOP" and v1.ClassName == "TextLabel" then
+                                for i,v2 in pairs(game:GetService("Workspace")["Server_Things"]:GetChildren()) do
+                                    if v2.ClassName == "Part" then
+                                        local magnitude = (v2.Position - v1.Parent.Parent.Position).magnitude
+                                        if magnitude < dist then
+                                            dist = magnitude
+                                            target = v2
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+                return target
+            end
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,ClosestPart(), 0)
+            firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,ClosestPart(), 1)
+        end)
+end)
+
+--Credits
+u:Button("maxgat5#8395",function()
+    setclipboard("maxgat5#8395")
+end)
+ 
+u:Button("Discord Server",function()
+    setclipboard("https://discord.gg/K4txdRSVfq")
+end)
+
+game:GetService('RunService').Stepped:connect(function()
+    spawn(function()
+        if BuyEgg == true then
+            game:GetService("ReplicatedStorage").Remotes.Buy_Pet:FireServer("Buy_Egg",{workspace.Eggs_Service[SelectedEgg],1})
+        end
+    end)
+    
+    spawn(function()
+        if Rebirth == true then
+            game:GetService("ReplicatedStorage").Remotes.Call_Server:InvokeServer("Rebirths")
+        end
+    end)
+    
+    spawn(function()
+        if AutoSell == true then
+            pcall(function()
+                function ClosestPart()
+                    local dist = math.huge
+                    local target = nil
+                    for i,v in pairs(game:GetService("Workspace").Map["1|MainMap"].Buildings:GetChildren()) do
+                        if v.ClassName == "Part" then
+                            for i,v1 in pairs(v.BillboardGui:GetChildren()) do
+                                if v1.Text == "SELL" and v1.ClassName == "TextLabel" then
+                                    for i,v2 in pairs(game:GetService("Workspace")["Server_Things"]:GetChildren()) do
+                                        if v2.ClassName == "Part" then
+                                            local magnitude = (v2.Position - v1.Parent.Parent.Position).magnitude
+                                            if magnitude < dist then
+                                                dist = magnitude
+                                                target = v2
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                    return target
+                end
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,ClosestPart(), 0)
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,ClosestPart(), 1)
+            end)
+        end
+    end)
+
+    spawn(function()
+        if AntiAfk == true then
+            local bb=game:service'VirtualUser'
+            bb:CaptureController()
+            bb:ClickButton2(Vector2.new())
+        end 
+    end)
+end)
+
+while wait() do
+    if AutoTpFlowers == true then
+        pcall(function()
+            local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+            function ClosestPart()
+                local dist = 50
+                local target = nil
+                for i,v in pairs(game:GetService("Workspace")["Points_Collect"][SelectedArea]:GetDescendants()) do
+                    if v.Name == "Flowers" then
+                        if v.Transparency == 0 then
+                            local magnitude = (v.Position - game:GetService("Players").LocalPlayer.Character.Head.Position).magnitude
+                            if magnitude > dist then
+                                dist = magnitude
+                                target = v
+                            end
+                        end
+                    end
+                end
+                return target
+            end
+            local tweenInfo = TweenInfo.new(
+            1
+            )
+            local t = game.TweenService:Create(game.Players.LocalPlayer.Character.PrimaryPart, tweenInfo, {CFrame = CFrame.new(
+            ClosestPart().CFrame.Position + Vector3.new(0,3,0)
+            )})
+            t:Play()
+            wait(1)
+        end)
+    end
+end

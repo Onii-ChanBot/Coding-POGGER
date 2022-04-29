@@ -1,0 +1,55 @@
+
+
+
+---Pickup
+local args = {
+    [1] = "Pickup",
+    [2] = {
+        [1] = 1.0685022149,
+        [2] = 10
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Money:FireServer(unpack(args))
+
+
+
+
+
+---Train one
+local args = {
+    [1] = "Train",
+    [2] = "1",
+    [4] = "MAX"
+}
+
+game:GetService("ReplicatedStorage").Events.Heroes:FireServer(unpack(args))
+
+---Attack
+local args = {
+    [1] = "self",
+    [2] = "219629d5067eddcdce55ed7968e9b53f"
+}
+
+game:GetService("ReplicatedStorage").Events.Weapon:FireServer(unpack(args))
+
+
+game:GetService("Workspace").Farms.Farm.Meat
+
+
+
+local playerHead = game.Players.LocalPlayer.Character.Head
+    spawn(function()
+        while wait() do
+            if not getgenv().collect then break end
+            for i, v in pairs(game:GetService("Workspace").Farms.Farm.Meat()) do
+                if v.Name == "TouchInterest" and v.Parent then
+                    --We will fire the touch event
+                    firetouchinterest(playerHead, v.Parent, 0)
+                    wait(0.1)
+                    firetouchinterest(playerHead, v.Parent, 1)
+                    break;
+                end
+            end
+        end
+    end)
