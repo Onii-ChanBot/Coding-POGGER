@@ -68,7 +68,7 @@ if game.PlaceId == 6672200623 then
                 end
             end
         end)
-    elseif game.PlaceId == 6961712970 then
+    elseif game.PlaceId == 8998370421 then
         local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
         local Window = Library.CreateLib("Clicker Madness!", "Midnight")
         local Main = Window:NewTab("Main")
@@ -78,7 +78,7 @@ if game.PlaceId == 6672200623 then
             spawn(function ()
                 while true do
                     if not getgenv().Click then return end
-                    game:GetService("Players").LocalPlayer.Character.Shoes.PutShoe:FireServer()
+                    workspace.Events.AddClick:FireServer()
                     wait()
                 end
             end)
